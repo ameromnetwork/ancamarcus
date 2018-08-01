@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+
+    <div class="title title-contact">
+        <div class="container">
+            <h1>Contact</h1>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block body %}
+<!-- begin Content -->
+<section>
+
+    <!-- begin Timetable -->
+    <article class="contact">
+        <div class="container">
+            <div class="map" id="map2"></div>
+            <div class="row">
+                <div class="col-md-8">
+                    <h6 class="contact-form-title">Got something to say?</h6>
+                    <form id="contact" action="contact-form.php" role="form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name" class="sr-only">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name *">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email" class="sr-only">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email *">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="subject" class="sr-only">subject</label>
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="message" class="sr-only">Messege</label>
+                                    <textarea type="text" class="form-control" id="message" name="message" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn btn-form" type="submit"><i class="icon-mail"></i>Send Id</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-response"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-4">
+                    <h6 class="contact-form-title">Information</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quaerat deleniti obcaecati repellat placeat rerum quam, iure aperiam sunt maiores porro quidem ea, officia unde eum ipsam vitae, eos perspiciatis.</p>
+                    <address>
+                        <p><i class="icon-location"></i>300 Collins St. Melbourne</p>
+                        <p><i class="icon-clock"></i>Monday to friday from 8AM to 7PM</p>
+                        <p><i class="icon-mail"></i><a href="mailto:email@democompany.com">hello@company.com</a></p>
+                        <p><i class="icon-mobile"></i>+61 4826 4762</p>
+                    </address>
+                </div>
+
+            </div>
+        </div>
+    </article>
+    <!-- end Timetable -->
+
+</section>
+<!-- end Content -->
+{% endblock %}
