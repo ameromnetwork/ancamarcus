@@ -16,7 +16,7 @@ class ContactController extends AbstractController
     /**
      * @return mixed
      *
-     * @Route("/contact")
+     * @Route("/contact", name="contact_index")
      */
     public function index()
     {
