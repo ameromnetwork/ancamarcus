@@ -1,5 +1,4 @@
-<!-- begin Header -->
-<header>
+
     <div class="topbar">
         <div class="container">
             <p class="date"><i class="icon-clock"></i> MON - FRI 9:00 AM - 17:00 PM</p>
@@ -26,7 +25,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="{{ asset('./public/assets/img/logo.png') }}" alt="">
+                    <img src="{{ asset('assets/img/logo.png') }}" alt="">
                 </a>
             </div>
 
@@ -34,51 +33,15 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav menu-effect">
                     <li {% if app.request.get('_route') == 'home_index' %}class="active"{% endif %}><a href="{{ path('home_index') }}">Home</a></li>
-                  {#  <li><a href="about-us.html">The Club</a></li>#}
-                    {#<li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classes <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="classes-four.html">Classes All</a></li>
-                            <li><a href="classes-two.html">Classes Two</a></li>
-                            <li><a href="classes-single.html">Classes Single</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="trainers.html">Teachers</a></li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">News <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="blog-three.html">News</a></li>
-                            <li><a href="blog-one.html">Blog One</a></li>
-                            <li><a href="blog-single.html">Blog Single</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="trainers-single.html">Trainers Single</a></li>
-                            <li><a href="events.html">Events</a></li>
-                            <li><a href="events-single.html">Events Single</a></li>
-                            <li><a href="events-sidebar.html">Events Sidebar</a></li>
-                            <li><a href="store.html">Store</a></li>
-                            <li><a href="single-store.html">Store Single</a></li>
-                            <li><a href="time-table.html">Time Table</a></li>
-                            <li><a href="error-404.html">Error 404</a></li>
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="shortcode.html">Shortcodes</a></li>
-                        </ul>#}
+
+                    <li {% if app.request.get('_route') == 'bio_index' %}class="active"{% endif %}><a href="{{ path('bio_index') }}">Bio</a></li>
+                    <li {% if app.request.get('_route') == 'workout_programs_index' %}class="active"{% endif %}><a href="{{ path('workout_programs_index') }}">Workout-Programs</a></li>
+                    <li {% if app.request.get('_route') == 'shop_index' %}class="active"{% endif %}><a href="{{ path('shop_index') }}">Shop</a></li>
+                    <li class="active"><a href="http://ancamarcus.com/" target="_blank">Blog</a></li>
                     <li {% if app.request.get('_route') == 'contact_index' %}class="active"{% endif %}><a href="{{ path('contact_index') }}">Contact</a></li>
 
-                    {#<li class="search menu-search">
-                        <form action="demo" autocomplete="on">
-                            <input id="search" name="search" type="text" placeholder="What're we looking for ?">
-                            <button id="search_submit" type="submit"><i class="icon-search"></i></button>
-                        </form>
-                    </li>#}
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </nav>
 
-    {% block header %} {% endblock %}
-</header>
-<!-- end Header -->

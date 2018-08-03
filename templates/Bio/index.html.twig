@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+
+    <div class="title title-trainer">
+        <div class="container">
+            <h1>Bio</h1>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block body %}
+    <!-- begin Content -->
+    <section>
+
+
+        <!-- begin Trainers -->
+        <article class="trainers trainers-single">
+            <div class="container">
+
+                {% include 'Bio/blocks/_trainer.html.twig' %}
+                {% include 'Bio/blocks/_why_us.html.twig' %}
+
+
+            </div>
+        </article>
+        <!-- end Trainers -->
+
+
+    </section>
+    <!-- end Content -->
+{% endblock %}

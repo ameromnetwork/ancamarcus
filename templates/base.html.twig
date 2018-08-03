@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Anca Marcus Fitness{% endblock %}</title>
         <!-- Responsive Metatag -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
@@ -43,10 +43,15 @@
 
     <body>
 
+    <!-- begin Header -->
+    <header>
+
     {% include 'Header/_topbar.html.twig' %}
 
+    {% block header %} {% endblock %}
 
-
+    </header>
+    <!-- end Header -->
 
         {% block body %}
 
