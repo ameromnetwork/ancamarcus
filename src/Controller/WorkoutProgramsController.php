@@ -3,11 +3,10 @@
  * Created by PhpStorm.
  * User: bill
  * Date: 8/3/2018
- * Time: 3:03 AM
+ * Time: 3:03 AM.
  */
 
 namespace App\Controller;
-
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;

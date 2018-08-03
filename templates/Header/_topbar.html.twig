@@ -1,47 +1,47 @@
-
-    <div class="topbar">
-        <div class="container">
-            <p class="date"><i class="icon-clock"></i> MON - FRI 9:00 AM - 17:00 PM</p>
-            <ul class="social">
-                <li><a href="#"><i class="icon-facebook"></i></a></li>
-                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                <li><a href="#"><i class="icon-gplus"></i></a></li>
-                <li><a href="#"><i class="icon-pinterest"></i></a></li>
-                <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                <li><a href="#"><i class="icon-vimeo"></i></a></li>
-                <li><a href="#"><i class="icon-instagram"></i></a></li>
-            </ul>
-        </div>
+<div class="topbar">
+    <div class="container">
+                <ul class="social">
+            <li><a href="#"><i class="icon-facebook"></i></a></li>
+            <li><a href="#"><i class="icon-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-gplus"></i></a></li>
+            <li><a href="#"><i class="icon-pinterest"></i></a></li>
+            <li><a href="#"><i class="icon-linkedin"></i></a></li>
+            <li><a href="#"><i class="icon-vimeo"></i></a></li>
+            <li><a href="#"><i class="icon-instagram"></i></a></li>
+        </ul>
     </div>
-    <!-- begin Navbar -->
-    <nav class="navbar" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="">
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav menu-effect">
-                    <li {% if app.request.get('_route') == 'home_index' %}class="active"{% endif %}><a href="{{ path('home_index') }}">Home</a></li>
-
-                    <li {% if app.request.get('_route') == 'bio_index' %}class="active"{% endif %}><a href="{{ path('bio_index') }}">Bio</a></li>
-                    <li {% if app.request.get('_route') == 'workout_programs_index' %}class="active"{% endif %}><a href="{{ path('workout_programs_index') }}">Workout-Programs</a></li>
-                    <li {% if app.request.get('_route') == 'shop_index' %}class="active"{% endif %}><a href="{{ path('shop_index') }}">Shop</a></li>
-                    <li class="active"><a href="http://ancamarcus.com/" target="_blank">Blog</a></li>
-                    <li {% if app.request.get('_route') == 'contact_index' %}class="active"{% endif %}><a href="{{ path('contact_index') }}">Contact</a></li>
-
-                </ul>
-            </div><!--/.nav-collapse -->
+</div>
+<!-- begin Navbar -->
+<nav class="navbar" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <div class="logo-text">
+                    <span>AncaMarcus</span><span><strong>Fitness</strong></span>
+                </div>
+            </a>
         </div>
-    </nav>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav menu-effect">
+                <li {% if app.request.get('_route') == 'home_index' %}class="active"{% endif %}><a href="{{ path('home_index') }}">Home</a></li>
+
+                <li {% if app.request.get('_route') == 'bio_index' %}class="active"{% endif %}><a href="{{ path('bio_index') }}">Bio</a></li>
+                <li {% if app.request.get('_route') == 'workout_programs_index' %}class="active"{% endif %}><a href="{{ path('workout_programs_index') }}">Workout Programs</a></li>
+               {# <li {% if app.request.get('_route') == 'shop_index' %}class="active"{% endif %}><a href="{{ path('shop_index') }}">Shop</a></li>#}
+                <li><a href="http://ancamarcus.com/" target="_blank">Blog</a></li>
+                <li {% if app.request.get('_route') == 'contact_index' %}class="active"{% endif %}><a href="{{ path('contact_index') }}">Contact</a></li>
+
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
 

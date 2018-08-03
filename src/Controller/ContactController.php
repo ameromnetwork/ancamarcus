@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: bill
  * Date: 8/1/2018
- * Time: 4:02 AM
+ * Time: 4:02 AM.
  */
 
 namespace App\Controller;
@@ -20,7 +20,6 @@ class ContactController extends AbstractController
      */
     public function index()
     {
-
         return $this->render('Contact/index.html.twig');
     }
 }
