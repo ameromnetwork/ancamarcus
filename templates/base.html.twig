@@ -39,37 +39,17 @@
         {% endblock %}
 
     </head>
-
-
-
     <body>
-    <div id="fb-root"></div>
-    <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1&appId=228210031363347&autoLogAppEvents=1';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
 
     <!-- begin Header -->
     <header>
 
     {% include 'Header/_topbar.html.twig' %}
-
     {% block header %} {% endblock %}
-
     </header>
     <!-- end Header -->
-
         {% block body %}
-
         {% endblock %}
-
-
-
     <!-- begin Footer -->
     <footer>
         {% include 'Footer/_hours.html.twig' %}
@@ -100,29 +80,26 @@
 
         <!-- Owl Carousel -->
         <script src="{{ asset('assets/js/vendors/owl-carousel/owl.carousel.js') }}"></script>
-
-        <!-- Slider Revolution -->
-        <script src="{{ asset('assets/js/vendors/revolution/js/jquery.themepunch.plugins.min.js') }}"></script>
-        <script src="{{ asset('assets/js/vendors/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
-
-        <!-- Custom Scroll Bars -->
-        <script src="{{ asset('assets/js/vendors/malihu/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-
-        <!-- Placeholder.js -->
-        <!--[if lte IE 9]> <script src="{{ asset('js/vendors/placeholder.js') }}" ></script> <script>Placeholder.init();</script> <![endif]-->
-
         <!-- Gmaps -->
-        <script src="http://maps.google.com/maps/api/js?sensor=true" ></script>
-        <script src="{{ asset('assets/js/vendors/gmaps.js') }}" ></script>
+        {#<script src="http://maps.google.com/maps/api/js?sensor=true" ></script>
+        <script src="{{ asset('assets/js/vendors/gmaps.js') }}" ></script>#}
 
         <script src="{{ asset('assets/js/vendors/bootstrap-slider.js') }}" ></script>
         <script src="{{ asset('assets/js/vendors/jquery/jquery.nav.js') }}" ></script>
 
         <!-- Custom -->
-        <script src="{{ asset('assets/js/script.js') }}"  ></script>
+        {#<script src="{{ asset('assets/js/script.js') }}"  ></script>#}
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123356486-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
+            gtag('config', 'UA-123356486-1');
+        </script>
 
-        {% endblock %}
+    {% endblock %}
     {% block extra_scripts %}{% endblock %}
     </body>
 </html>
