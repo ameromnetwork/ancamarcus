@@ -1,13 +1,9 @@
 <div class="topbar">
     <div class="container">
-                <ul class="social">
-            <li><a href="#"><i class="icon-facebook"></i></a></li>
-            <li><a href="#"><i class="icon-twitter"></i></a></li>
-            <li><a href="#"><i class="icon-gplus"></i></a></li>
-            <li><a href="#"><i class="icon-pinterest"></i></a></li>
-            <li><a href="#"><i class="icon-linkedin"></i></a></li>
-            <li><a href="#"><i class="icon-vimeo"></i></a></li>
-            <li><a href="#"><i class="icon-instagram"></i></a></li>
+        <ul class="social">
+            <li><a target="_blank" href="https://www.facebook.com/Ancamarcusfitness/"><i class="icon-facebook"></i></a></li>
+            <li><a target="_blank" href="https://twitter.com/AncaMarcusfit"><i class="icon-twitter"></i></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/ancamarcusfitness/"><i class="icon-instagram"></i></a></li>
         </ul>
     </div>
 </div>
@@ -37,7 +33,7 @@
                 <li {% if app.request.get('_route') == 'bio_index' %}class="active"{% endif %}><a href="{{ path('bio_index') }}">Bio</a></li>
                 <li {% if app.request.get('_route') == 'workout_programs_index' %}class="active"{% endif %}><a href="{{ path('workout_programs_index') }}">Workout Programs</a></li>
                {# <li {% if app.request.get('_route') == 'shop_index' %}class="active"{% endif %}><a href="{{ path('shop_index') }}">Shop</a></li>#}
-                <li><a href="http://ancamarcus.com/" target="_blank">Blog</a></li>
+                <li {% if app.request.get('_route') == 'blog' %}class="active"{% endif %}><a href="{{ path('blog') }}">Blog</a></li>
                 <li {% if app.request.get('_route') == 'contact_index' %}class="active"{% endif %}><a href="{{ path('contact_index') }}">Contact</a></li>
 
             </ul>

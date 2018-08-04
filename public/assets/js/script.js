@@ -215,7 +215,7 @@
 			navigationType: "bullet",
 			navigationHAlign: "center",
 			navigationVAlign: "bottom"
-		}
+		};
 
 		if(jQuery().revolution) {
 			$banner.revolution(args);
