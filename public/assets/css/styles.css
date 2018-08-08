@@ -64,7 +64,7 @@
 /***************************************************************************/
 /*****************************  $General Tags  *****************************/
 a {
-  color: #565656;
+  color: #060606;
   font-family: 'Open Sans';
   font-size: 0.875em;
   outline: 0;
@@ -203,7 +203,7 @@ embed {
   outline: 0;
 }
 p {
-  color: #919191;
+  color: #060606;
   font-family: 'Open Sans';
   font-size: 0.875em;
   line-height: 1.7em;
@@ -856,7 +856,7 @@ ul {
  *
 /*****************************  $Footer Bottom  ****************************/
 .copy {
-  background-color: #000;
+  background-color: #d3d3d3;
 }
 .copy a {
   text-decoration: none;
@@ -874,11 +874,11 @@ ul {
  *
 /*****************************  $Footer Middle  ****************************/
 .info {
-  background-color: #191919;
+  background-color: #fff;
   padding: 65px 0;
 }
 .info h4 {
-  color: #959595;
+  color: #060606;
   font-size: 1em;
   font-weight: 700;
   margin-top: 35px;
@@ -904,7 +904,7 @@ ul {
   position: relative;
 }
 .info .foot-newsletter .form-control {
-  background-color: #262626;
+  background-color: #d3d3d3;
   height: 40px;
   line-height: 24px;
   padding: 13px 80px 13px 13px;
@@ -1013,7 +1013,7 @@ ul {
  *
 /******************************  $Highlights  ******************************/
 .highlights {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(223, 223, 223,0.8);
   bottom: 0;
   left: 0;
   position: absolute;
@@ -1243,7 +1243,7 @@ ul {
  *
 /**************************  $Navigation Navbar  ***************************/
 .navbar {
-  background-color: #1d1d1d;
+  background-color: #fbfbfb;
   margin: 0;
 }
 .navbar .navbar-nav {
@@ -1267,10 +1267,11 @@ ul {
 .nav .open>a:hover, 
 .nav .open>a:focus {
   background-color: #262626;
+  color: #fff;
 }
 .navbar .navbar-nav li.active a {
-  background-color: #000;
-  color: #b7b7b7;
+  /*background-color: #000;*/
+  color: #000;
 }
 /**
  *
@@ -1792,7 +1793,7 @@ ul {
   margin-right: auto;
   max-height: 765px !important;
   overflow: hidden !important;
-  padding: 5px;
+  padding: 2px;
   position: relative;
 }
 .bannercontainer .caption {
@@ -2830,7 +2831,7 @@ header .title-timetable{
  *
 /*******************************  $Top Bar  ********************************/
 .topbar {
-  background-color: #262626;
+  background-color: #fff;
   min-height: 75px;
 }
 .topbar .date {
