@@ -8,7 +8,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Contact;
+use App\Form\ContactFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ContactController extends AbstractController
@@ -18,8 +21,35 @@ class ContactController extends AbstractController
      *
      * @Route("/contact", name="contact_index")
      */
-    public function index()
+    public function index(Request $request)
     {
-        return $this->render('Contact/index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $contact = new Contact();
+        $form = $this->createForm(ContactFormType::class, $contact);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid())
+        {
+            $contact = $form->getData();
+
+            $em->persist($contact);
+            $em->flush();
+
+            $this->addFlash(
+                'notice',
+                'Your changes were saved!'
+            );
+
+            return $this->render('Contact/index.html.twig', array(
+                'form' => $form->createView(),
+            ));
+        }
+
+
+
+        return $this->render('Contact/index.html.twig', array(
+            'form' => $form->createView(),
+        ));
     }
 }
