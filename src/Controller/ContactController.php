@@ -10,6 +10,7 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Form\ContactFormType;
+use App\Service\ApiLeads;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -21,7 +22,7 @@ class ContactController extends AbstractController
      *
      * @Route("/contact", name="contact_index")
      */
-    public function index(Request $request)
+    public function index(Request $request, ApiLeads $apiLeads)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -35,6 +36,8 @@ class ContactController extends AbstractController
 
             $em->persist($contact);
             $em->flush();
+
+            $apiLeads->ApiPostAction($contact, $request);
 
             $this->addFlash(
                 'notice',
