@@ -18,10 +18,9 @@ class Contact
         $this->createdAt = new \DateTime();
     }
 
-
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
+     * @ORM\Id
+     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
     private $id;
@@ -117,6 +116,4 @@ class Contact
 
         return $this;
     }
-
-
 }

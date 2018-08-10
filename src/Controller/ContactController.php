@@ -18,9 +18,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class ContactController extends AbstractController
 {
     /**
-     * @return mixed
-     *
      * @Route("/contact", name="contact_index")
+     *
+     * @param Request  $request
+     * @param ApiLeads $apiLeads
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function index(Request $request, ApiLeads $apiLeads)
     {
@@ -30,14 +33,18 @@ class ContactController extends AbstractController
         $form = $this->createForm(ContactFormType::class, $contact);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid())
-        {
+        if ($form->isSubmitted() && $form->isValid()) {
             $contact = $form->getData();
 
             $em->persist($contact);
             $em->flush();
 
-            $apiLeads->ApiPostAction($contact, $request);
+            $requestData = \array_merge(
+                $request->request->all(),
+                $request->query->all()
+            );
+
+            $apiLeads->postContactRequest($contact, $requestData);
 
             $this->addFlash(
                 'notice',
@@ -49,10 +56,42 @@ class ContactController extends AbstractController
             ));
         }
 
-
-
         return $this->render('Contact/index.html.twig', array(
             'form' => $form->createView(),
         ));
+    }
+
+    /**
+     * @Route("/email-subscribe", name="email_subscribe")
+     *
+     * @param Request  $request
+     * @param ApiLeads $apiLeads
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function emailSubscribe(Request $request, ApiLeads $apiLeads)
+    {
+        $email = $request->get('subscribe_email', false);
+        $routeRedirect = $request->get('route_redirect', false);
+
+        $requestData = \array_merge(
+            $request->request->all(),
+            $request->query->all()
+        );
+
+        if (false !== $email) {
+            $apiLeads->postEmailSubscriptionRequest($email, $requestData);
+        }
+
+        $this->addFlash(
+            'notice',
+            'You have been subscribed!'
+        );
+
+        if (false !== $routeRedirect) {
+            return $this->redirectToRoute($routeRedirect);
+        }
+
+        return $this->redirectToRoute('home_index');
     }
 }

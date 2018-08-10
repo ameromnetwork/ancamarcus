@@ -24,12 +24,13 @@
             <div class="col-md-3 col-sm-6">
                 <h4>Subscribe</h4>
                 <p>Get in touch with me...</p>
-                <form action="contact-form.php" data-ajax="1" class="foot-newsletter">
+                <form action="{{ path('email_subscribe') }}" data-ajax="1" class="foot-newsletter" method="post">
                     <input type="hidden" name="type" value="footer-newsletter">
                     <div class="form-group">
                         <label for="foot-news-email" class="sr-only">Enter a valid email</label>
-                        <input type="email" class="form-control" name="foot-news-email" id="foot-news-email" placeholder="Enter a valid email" />
+                        <input type="email" class="form-control" name="subscribe_email" id="subscribe_email" placeholder="Enter a valid email" />
                     </div>
+                    <input type="hidden" name="route_redirect" value="{{ app.request.attributes.get('_route') }}" />
                     <button class="btn btn-foot-news" type="submit"><i class="icon-mail"></i></button>
                     <div class="form-response"></div>
                 </form>
