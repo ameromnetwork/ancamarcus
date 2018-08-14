@@ -6381,16 +6381,16 @@
         },
         {
             "name": "zendframework/zend-code",
-            "version": "3.3.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-code.git",
-                "reference": "6b1059db5b368db769e4392c6cb6cc139e56640d"
+                "reference": "c21db169075c6ec4b342149f446e7b7b724f95eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/6b1059db5b368db769e4392c6cb6cc139e56640d",
-                "reference": "6b1059db5b368db769e4392c6cb6cc139e56640d",
+                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/c21db169075c6ec4b342149f446e7b7b724f95eb",
+                "reference": "c21db169075c6ec4b342149f446e7b7b724f95eb",
                 "shasum": ""
             },
             "require": {
@@ -6411,8 +6411,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev",
-                    "dev-develop": "3.3-dev"
+                    "dev-master": "3.3.x-dev",
+                    "dev-develop": "3.4.x-dev"
                 }
             },
             "autoload": {
@@ -6430,7 +6430,7 @@
                 "code",
                 "zf2"
             ],
-            "time": "2017-10-20T15:21:32+00:00"
+            "time": "2018-08-13T20:36:59+00:00"
         },
         {
             "name": "zendframework/zend-eventmanager",
@@ -6660,70 +6660,6 @@
             "time": "2018-07-27T15:41:37+00:00"
         },
         {
-            "name": "miracode/stripe-bundle",
-            "version": "v1.0.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mirovskyi/stripe-bundle.git",
-                "reference": "6031571633d3f3deece4d3199c98f2c67a5b980f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mirovskyi/stripe-bundle/zipball/6031571633d3f3deece4d3199c98f2c67a5b980f",
-                "reference": "6031571633d3f3deece4d3199c98f2c67a5b980f",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/common": ">=2.2",
-                "php": ">=5.4.0",
-                "stripe/stripe-php": ">=3.0",
-                "symfony/config": ">=2.3",
-                "symfony/framework-bundle": ">=2.4"
-            },
-            "require-dev": {
-                "doctrine/orm": ">=2.2",
-                "phpunit/phpunit": "~4.8|~5.0",
-                "symfony/yaml": "^2.8 || ^3.0 || ^4.0"
-            },
-            "suggest": {
-                "doctrine/orm": "If you want to save stripe data in database"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Miracode\\StripeBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Aleksey Mirovskyi",
-                    "email": "mirovskyi@gmail.com"
-                }
-            ],
-            "description": "Symfony bundle to integrate Stripe PHP SDK. Ability to save Stripe objects in database using Doctrine.",
-            "keywords": [
-                "bundle",
-                "payment",
-                "php",
-                "stripe",
-                "symfony",
-                "webpayment"
-            ],
-            "time": "2018-02-19T16:55:56+00:00"
-        },
-        {
             "name": "nikic/php-parser",
             "version": "v4.0.3",
             "source": {
@@ -6773,61 +6709,6 @@
                 "php"
             ],
             "time": "2018-07-15T17:25:16+00:00"
-        },
-        {
-            "name": "stripe/stripe-php",
-            "version": "v6.15.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "20e18a9feface85d183eece03e84013ff794d5b1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/20e18a9feface85d183eece03e84013ff794d5b1",
-                "reference": "20e18a9feface85d183eece03e84013ff794d5b1",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0",
-                "satooshi/php-coveralls": "~0.6.1",
-                "squizlabs/php_codesniffer": "~2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Stripe\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Stripe and contributors",
-                    "homepage": "https://github.com/stripe/stripe-php/contributors"
-                }
-            ],
-            "description": "Stripe PHP Library",
-            "homepage": "https://stripe.com/",
-            "keywords": [
-                "api",
-                "payment processing",
-                "stripe"
-            ],
-            "time": "2018-08-03T10:54:52+00:00"
         },
         {
             "name": "symfony/browser-kit",
@@ -7006,20 +6887,20 @@
         },
         {
             "name": "symfony/debug-pack",
-            "version": "v1.0.5",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug-pack.git",
-                "reference": "ae4b15596788f9592f67f8615398671bf3f796e4"
+                "reference": "630548c117a5f9e27d3385787641629945b6de50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug-pack/zipball/ae4b15596788f9592f67f8615398671bf3f796e4",
-                "reference": "ae4b15596788f9592f67f8615398671bf3f796e4",
+                "url": "https://api.github.com/repos/symfony/debug-pack/zipball/630548c117a5f9e27d3385787641629945b6de50",
+                "reference": "630548c117a5f9e27d3385787641629945b6de50",
                 "shasum": ""
             },
             "require": {
-                "easycorp/easy-log-handler": "^1.0.2",
+                "easycorp/easy-log-handler": "^1.0.7",
                 "php": "^7.0",
                 "symfony/debug-bundle": "^3.3|^4.0",
                 "symfony/monolog-bundle": "^3.0",
@@ -7032,7 +6913,7 @@
                 "MIT"
             ],
             "description": "A debug pack for Symfony projects",
-            "time": "2018-03-29T13:53:44+00:00"
+            "time": "2018-08-10T15:18:32+00:00"
         },
         {
             "name": "symfony/dom-crawler",
