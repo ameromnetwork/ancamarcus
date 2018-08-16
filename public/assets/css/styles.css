@@ -1243,8 +1243,10 @@ ul {
  *
 /**************************  $Navigation Navbar  ***************************/
 .navbar {
-  background-color: #fbfbfb;
+  /*background-color: #fbfbfb;*/
+  background-color: #ffffff;
   margin: 0;
+  border: 1px solid #e3e3e3;
 }
 .navbar .navbar-nav {
   float: right;
@@ -1255,7 +1257,10 @@ ul {
   color: #5e5e5e;
   font-size: 0.9em;
   font-weight: 600;
+  font-family: "Roboto Condensed";
   line-height: 58px;
+  font-style: italic;
+  /*font: bold italic 15px/16px "Roboto Condensed";*/
   margin: 0;
   padding: 0 20px;
   text-transform: uppercase;
@@ -1266,23 +1271,23 @@ ul {
 .nav .open>a, 
 .nav .open>a:hover, 
 .nav .open>a:focus {
-  background-color: #262626;
-  color: #fff;
+  background-color: #ffffff;
+  color: #dfdfdf;
 }
 .navbar .navbar-nav li.active a {
   /*background-color: #000;*/
-  color: #000;
+  color: #333;
 }
 /**
  *
  *
 /***********************  $Navigation Navbar Toggle ************************/
 .navbar-toggle {
-  border-color: #fff;
+  border-color: #5e5e5e;
   margin: 30px 10px;
 }
 .navbar-toggle span {
-  background-color: #fff;
+  background-color: #5e5e5e;
 }
 /**
  *

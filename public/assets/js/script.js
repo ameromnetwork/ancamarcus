@@ -203,6 +203,10 @@
 		args = {
 			startheight:750,
 			startwidth:1500,
+
+            height: 600,
+            autoHeight: "off",
+            gridheight: [600],
 			
 			fullWidth:"on",
 			fullScreen:"off",
