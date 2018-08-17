@@ -1,0 +1,134 @@
+/*
+    Name: Elegance
+    Description: Responsive HTML One Page
+    Version: 1.0
+    Author: Schintu Desing
+
+[Table of contents]
+
+1. General / body
+	- Loading / .loader
+2. Header / .navbar
+3. Content
+	- Main Styles
+	- Contact / .contact
+4. Footer / #footer
+*/
+
+
+/* ================================= */
+/* :::::::::: General ::::::::::: */
+/* ================================= */
+
+body {
+	background-color: #181818;
+	color: #ffffff;
+}
+a, a:link {
+}
+a:hover {
+}
+#mask {
+    background-color: #181818;
+}
+/* ================================= */
+/* :::::::::: Header :::::::::::: */
+/* ================================= */
+
+.nav-item a.nav-link.active, .nav-item .nav-link:hover {
+	color: #918354!important;
+}
+.nav-item .nav-link {
+	color: #ffffff!important;
+}
+.navbar {
+	background-color: #252525;
+	border-bottom: 1px solid #918354;
+}
+.navbar-brand {
+	color: #ffffff!important;
+}
+
+/* ================================= */
+/* :::::: Content ::::::: */
+/* ================================= */
+
+.white-box {
+	background: #181818;
+	border: 2px solid #918354;
+}
+.white-box span {
+	color: #918354;
+}
+.btn-main, .btn-download {
+	background-color: #918354;
+}
+.btn-main:hover, .btn-download:hover {
+	background-color: #AB9D6B;
+}
+
+.title {
+	background: url("../images/el-gold-opacity.svg");
+	background-repeat: no-repeat;
+	background-size: 111px;
+	background-position: center;
+}
+
+/* Portfolio*/
+.button {
+	color: #ffffff;
+}
+
+.team .team-name span {
+	color: #ffffff;
+}
+.team .team-social {
+	color: #ffffff;
+}
+.team .team-social a:link, .team .team-social a {
+	color: #555555;
+}
+.team .team-social a:hover {
+	color: #918354;
+}
+
+/* Milestones */
+.milestone-details {
+	color: #ffffff;
+}
+
+/* Contact */
+.contact .contact-logo {
+	color: #ffffff;
+}
+.contact-form input {
+	border: 1px solid #918354;
+	color: #DAD1B5;
+	background: #1C1C1C;
+}
+.contact-form textarea {
+	border: 1px solid #918354;
+	color: #DAD1B5;
+	background: #1C1C1C;
+}
+
+/* ================================= */
+/* :::::: Footer ::::::: */
+/* ================================= */
+
+#footer {
+	background-color: #1C1C1C;
+}
+#footer .footer-logo {
+	color: #ffffff;
+}
+
+#footer .footer-social a, #footer .footer-social a:link {
+	color: #555555;
+
+}
+
+#menuCollapse .navbar-nav {
+	background: #252525;
+}
+

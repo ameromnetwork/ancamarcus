@@ -1,104 +1,363 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Elegance">
+        <meta name="keywords" content="Elegance,  landing launch page, html5, responsive">
+        <meta name="author" content="Schintu Design">
         <title>{% block title %}Anca Marcus Fitness{% endblock %}</title>
-        <!-- Responsive Metatag -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-        <!-- <meta http-equiv="X-UA-Compatible" content="IE=9" />-->
         {% block stylesheets %}
-        <!-- ****************************  CSS  **************************** -->
-        <!-- Fonts: Open Sans and Raleway, from Google Fonts -->
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800%7CRaleway:400,100,200,300,500,600,800,700,900' />
 
-        <!-- Font icons: Fontello -->
-        <link rel="stylesheet" href="{{ asset('assets/css/vendors/fontello.css') }}" />
+        <!-- ============ GOOGLE FONTS ============ -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600" rel="stylesheet">
 
+        <!-- CSS -->
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="{{ asset('assets/css/vendors/bootstrap.min.css') }}" />
-
-        <!-- Owl Carousel -->
-        <link rel="stylesheet" href="{{ asset('assets/js/vendors/owl-carousel/owl.carousel.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/js/vendors/owl-carousel/owl.theme.css') }}">
-
-        <!-- Slider Revolution -->
-        <link rel="stylesheet" href="{{ asset('assets/js/vendors/revolution/css/settings.css') }}">
-
-        <!-- Custom Scroll Bars -->
-        <link rel="stylesheet" href="{{ asset('assets/js/vendors/malihu/jquery.mCustomScrollbar.css') }}" />
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" />
-        {#<link rel="stylesheet" href="{{ asset('assets/css/colors/orange.css') }}" />#}
-        <link rel="stylesheet" href="{{ asset('assets/css/colors/grey.css') }}" />
-        <link rel="stylesheet" href="{{ asset('build/app.css') }}" />
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
-        <link rel='stylesheet' id='wpv-gfonts-css' href='//fonts.googleapis.com/css?family=Roboto+Condensed%3Anormal%2Cbolditalic%2Citalic%2Cbold%7CRoboto%3Anormal%2C300%2Cbold&#038;subset=latin&#038;ver=12' type='text/css' media='all' />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:800%2C900" rel="stylesheet" property="stylesheet" type="text/css" media="all">
-
-        <link rel="icon" href="{{ asset('assets/img/favicon.ico') }}" type="image/x-icon">
-        <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+        <!-- Animate css -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/font-awesome.min.css') }}" />
+        <!-- Slider css -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slippry.css') }}">
+        <!-- Custom styles CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
 
         {% endblock %}
 
     </head>
-    <body>
+    <body data-spy="scroll" data-target="#navbar" data-offset="10">
 
-    <!-- begin Header -->
-    <header>
+    <!-- Loading Site -->
+    {% include 'Header/_loader.html.twig' %}
+    <!-- HEADER -->
+    {% include 'Header/_header.html.twig' %}
 
-    {% include 'Header/_topbar.html.twig' %}
-    {% block header %} {% endblock %}
-    </header>
-    <!-- end Header -->
-        {% block body %}
-        {% endblock %}
-    <!-- begin Footer -->
-    <footer>
-        {% include 'Footer/_hours.html.twig' %}
-        {% include 'Footer/_info.html.twig' %}
-        {% include 'Footer/_copy.html.twig' %}
+
+    {% block body %}
+
+    {% endblock %}
+
+
+
+    {#<!-- HOME -->#}
+    {#<div class="section">#}
+        {#<div class="container center home-content">#}
+            {#<div class="row align-items-center">#}
+                {#<div class="col">#}
+                    {#<div class="title">WE<br>#}
+                        {#REDEFINE<br>#}
+                        {#STYLE</div>#}
+                {#</div>#}
+                {#<div class="col-5">#}
+                    {#<div>A modern touch of elegance and style combined<br>#}
+                        {#with a luxurious environment. Don’t compromise your lifetyle.<br>#}
+                        {#<a href="">Buy this theme</a> now!</div>#}
+                {#</div>#}
+                {#<div class="col">#}
+                    {#<div class="right"><a href="#" class="btn-main">donwload now!</a></div>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+        {#<div class="spacer-100"></div>#}
+    {#</div>#}
+
+    {#<!-- ABOUT US -->#}
+    {#<div class="section" id="about-us">#}
+        {#<!-- Parallax Slide -->#}
+        {#<section id="slide-1" class="homeSlide">#}
+            {#<div class="bcg"  data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;"  data-anchor-target="#slide-1"> </div>#}
+        {#</section><!-- parallax slide ends here -->#}
+    {#</div>#}
+    {#<div class="section">#}
+        {#<div class="container">#}
+            {#<div class="row">#}
+                {#<div class="col-4"> </div>#}
+                {#<div class="col-8">#}
+                    {#<div class="white-box center">#}
+                        {#<div class="title">WHO WE ARE</div>#}
+                        {#<div class="row">#}
+                            {#<div class="col">#}
+                                {#<!-- 1st column content -->#}
+                                {#<p><b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry›s standard dummy text ever <b>since the 1500s</b>, when an unknown printer took a galley of type and scrambled it to make a type specimen book.. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <i>It was popularised in the 1960s with the release of Letraset sheets remaining unchained.</i> Aldus <a href="">PageMaker</a> including versions of Lorem Ipsum.#}
+                                    {#Aldus PageMaker including versions of Lorem Ipsum.</p>#}
+                            {#</div>#}
+                            {#<div class="col">#}
+                                {#<!-- 2nd column content -->#}
+                                {#<p>Lorem Ipsum has been the industry›s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>#}
+                                    {#<span>FOR A BETTER<br>#}
+                {#LIVING</span> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.</p>#}
+                            {#</div>#}
+                        {#</div>#}
+                        {#<div class="white-box-link"><a href="#" class="btn-download">download brochure <i class="fa fa-cloud-download" aria-hidden="true"></i></a></div>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+
+    <!-- SERVICES -->
+    <div class="spacer-160"></div>
+    <div class="section" id="services">
+        <div class="container center services">
+            <div class="title">NO COMPROMISE</div>
+            <div>A modern touch of elegance and style combined with a luxurious environment. <br>
+                Don’t compromise your lifetyle. <a href="">Buy this theme</a> now!</div>
+            <ul id="services-slider">
+                <!-- 1st slide content (within the <li>)-->
+                <li>
+                    <div class="row">
+                        <div class="col left">
+                            <div class="service-box-left"><img src="images/services/04.jpg" alt="Elegance">
+                                <div class="service-content-box"><span>MOST ADVANCED TECHNOLOGY</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, </div>
+                            </div>
+                        </div>
+                        <div class="col right">
+                            <div class="service-box-right"><img src="images/services/02.jpg" alt="Elegance">
+                                <div class="service-content-box"><span>MODERN LAYOUTS</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- 2nd slide content (within the <li>)-->
+                <li>
+                    <div class="row">
+                        <div class="col left">
+                            <div class="service-box-left"><img src="images/services/03.jpg" alt="Elegance">
+                                <div class="service-content-box"><span>BEST TEAM IN THE WORLD</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, </div>
+                            </div>
+                        </div>
+                        <div class="col right">
+                            <div class="service-box-right"><img src="images/services/01.jpg" alt="Elegance">
+                                <div class="service-content-box"><span>MODERN LAYOUTS</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Banner-->
+    <div class="spacer-160"></div>
+    <!-- Parallax Slide -->
+    <section id="slide-2" class="homeSlide">
+        <div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-2">
+            <div class="hsContainer" id="#skrollr-body">
+                <div class="hsContent" data--50-bottom="opacity: 0;" data--300-bottom="opacity: 1;" data-center="opacity: 1;" data-anchor-target="#slide-2 h2">
+                    <div class="centered-content align-content-center">
+                        <h2>RE-INVENTING <span>TOMORROW</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <div class="spacer-160"></div>
+    <div class="container center" id="portfolio">
+        <div class="title">PORTFOLIO</div>
+    </div>
+    <div class="button-group filters-button-group">
+        <button class="button is-checked" data-filter="*">ALL</button>
+        <button class="button" data-filter=".private">PRIVATE</button>
+        <button class="button" data-filter=".modern">MODERN</button>
+        <button class="button" data-filter=".luxury">LUXURY</button>
+        <button class="button" data-filter=".newideas">NEW IDEAS</button>
+    </div>
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        <!-- item -->
+        <div class="grid-item luxury private" data-category="private">
+            <a href="portfolio-template.html"><div class="box">
+                    <div class="name">Wayne Enterprise Offices<span>New York (U.S.A.)</span></div>
+                </div></a>
+            <div class="img"><img src="images/portfolio/01.jpg" alt=""></div>
+        </div>
+        <!-- item -->
+        <div class="grid-item modern" data-category="modern">
+            <a href="portfolio-template.html"><div class="box">
+                    <div class="name">Water House<span>Lago di Como (Italy)</span></div>
+                </div></a>
+            <div class="img"><img src="images/portfolio/02.jpg" alt=""></div>
+        </div>
+        <!-- item -->
+        <div class="grid-item luxury private" data-category="luxury">
+            <a href="portfolio-template.html"><div class="box">
+                    <div class="name">New Research Center<span>Antartica</span></div>
+                </div></a>
+            <div class="img"><img src="images/portfolio/03.jpg" alt=""></div>
+        </div>
+        <!-- item -->
+        <div class="grid-item private" data-category="private">
+            <a href="portfolio-template.html"><div class="box">
+                    <div class="name">Bloomer Residence<span>Orlando (U.S.A.)</span></div>
+                </div></a>
+            <div class="img"><img src="images/portfolio/04.jpg" alt=""></div>
+        </div>
+        <!-- item -->
+        <div class="grid-item newideas private" data-category="newideas">
+            <a href="portfolio-template.html"><div class="box">
+                    <div class="name">Elegance Residence <span>Tokyo (Japan)</span></div>
+                </div></a>
+            <div class="img"><img src="images/portfolio/06.jpg" alt=""></div>
+        </div>
+        <!-- item -->
+        <div class="grid-item luxury metal" data-category="private">
+            <a href="portfolio-template.html"><div class="box">
+                    <div class="name">The new Harbor <span>Chicago (U.S.A.)</span></div>
+                </div></a>
+            <div class="img"><img src="images/portfolio/05.jpg" alt=""></div>
+        </div>
+        <!-- item -->
+        <div class="grid-item newideas private" data-category="newideas">
+            <a href="portfolio-template.html"><div class="box">
+                    <div class="name">Opera House<span>Paris (France)</span></div>
+                </div></a>
+            <div class="img"><img src="images/portfolio/07.jpg" alt=""></div>
+        </div>
+    </div>
+
+    <!-- TEAM -->
+    <div class="spacer-160"></div>
+    <div class="container center" id="team">
+        <div class="title">A TALENTED TEAM</div>
+        <p>A modern touch of elegance and style combined with a luxurious environment. <br>
+            Don’t compromise your lifetyle. <a href="">Buy this theme</a> now!</p>
+        <div class="spacer-40"></div>
+        <div class="row team">
+            <!-- team member -->
+            <div class="col-2">
+                <div><img src="images/team/01.jpg" alt="Elegance">
+                    <div class="team-name">David Lacoste<span>Senior Architect - CEO</span></div>
+                    <div class="team-social"><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a></div>
+                </div>
+            </div>
+            <!-- team member -->
+            <div class="col-2">
+                <div><img src="images/team/04.jpg" alt="Elegance"> </div>
+                <div class="team-name">Francisco Gomez<span>Senior Architect</span></div>
+                <div class="team-social"> <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href=""><i class="fa fa-facebook-f" aria-hidden="true"></i></a> <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a></div>
+            </div>
+            <!-- team member -->
+            <div class="col-2">
+                <div><img src="images/team/02.jpg" alt="Elegance"> </div>
+                <div class="team-name">Anton J. Elz<span>Senior Home Designer</span></div>
+                <div class="team-social"> <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a></div>
+            </div>
+            <!-- team member -->
+            <div class="col-2">
+                <div><img src="images/team/05.jpg" alt="Elegance"> </div>
+                <div class="team-name">Clarissa Mancini<span>Architect - Co-Founder</span></div>
+                <div class="team-social"> <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href=""><i class="fa fa-facebook-f" aria-hidden="true"></i></a> <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a></div>
+            </div>
+            <!-- team member -->
+            <div class="col-2">
+                <div><img src="images/team/03.jpg" alt="Elegance"> </div>
+                <div class="team-name">Ross Bonafini<span>Home Designer</span></div>
+                <div class="team-social"> <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href=""><i class="fa fa-facebook-f" aria-hidden="true"></i></a> <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a></div>
+            </div>
+            <!-- team member -->
+            <div class="col-2">
+                <div><img src="images/team/06.jpg" alt="Elegance"> </div>
+                <div class="team-name">Maria Elvan<span>Graphic/3D Designer</span></div>
+                <div class="team-social"> <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href=""><i class="fa fa-facebook-f" aria-hidden="true"></i></a> <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a><a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAP -->
+    <div class="spacer-160"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD61B9tyc2LQvicG_-A4z9ap2NgH7WJY6s&callback=initMap"></script>
+    <div id="map"></div>
+
+
+    <!-- CONTACT -->
+    <div class="spacer-160"></div>
+    <div class="container center" id="contact">
+        <div class="title">ELEGANCE &amp; SIMPLICITY</div>
+        <div class="contact row">
+            <div class="col left">
+                <form method="post" class="contact-form" action="mail.php">
+                    <div id="personal">
+                        <div class="control-group"><!--name field-->
+                            <div class="controls">
+                                <input class="required span9" type="text" name="name" data-fieldid="0" value="Full Name" onclick="if(this.value=='Full Name') this.value=''" onblur="if(this.value=='') this.value='Full Name'">
+                            </div>
+                        </div>
+                        <div class="control-group"><!--email field-->
+                            <div class="controls">
+                                <input class="required span9" type="email" name="email" data-fieldid="1" value="Your Email" onclick="if(this.value=='Your Email') this.value=''" onblur="if(this.value=='') this.value='Your Email'">
+                            </div>
+                        </div>
+                        <div class="control-group"><!--message field-->
+                            <div class="controls">
+                                <textarea name="message" rows="12" class="required span9" data-fieldid="2" onclick="if(this.value=='Type Message') this.value=''" onblur="if(this.value=='') this.value='Type Message'">Write something cool...</textarea>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls right">
+                                <button type="submit" class="btn-main">Send <i class="fa fa-send" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications">
+                        <div id="contactFormSent" class="formSent alert alert-success"> <strong>Your Message Has Been Sent!</strong> Thank you for contacting us.</div>
+                        <div id="contactFormError" class="formError alert alert-error"> <strong>Oops, An error has ocurred!</strong> See the marked fields above to fix the errors.</div>
+                    </div>
+                </form>
+            </div>
+            <div class="col left">
+                <div class="contact-logo"><img src="images/logo.svg" alt="logo" /> ELEGANCE</div>
+                <div class="info">24th Street, 3423 - P.O: 34542 - New York - U.S.A.<br>
+                    Tel: +1 454 27837465  &nbsp;&nbsp;&nbsp;&nbsp; +1 4562736455<br>
+                    <a href="">www.elegancestudios.com</a> | <a href="">welcome@elegancestudios.com</a></div>
+                <p>If you are in town, come and visit our new elegant and modern offices in the heart of New York City. A stunning and welcoming environment.
+                    If you have any questions, please drop us a line in the below form.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scroll Up -->
+    <button onclick="topFunction();" id="myBtn"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+    <!-- FOOTER -->
+    <div class="spacer-100"></div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col left">
+                    <div class="footer-logo"><img src="images/logo.svg" alt="logo" /> ELEGANCE</div>
+                </div>
+                <div class="col center">
+                    <div class="footer-social"> <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+                </div>
+                <div class="col right info">All Rights reserved - Elegance L.T.D.</div>
+            </div>
+        </div>
     </footer>
-    <!-- end Footer -->
+
 
     {% block javascripts %}
 
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
 
-        <!-- Media queries -->
-        <!--[if lt IE 9]>
-        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
+        <script src="{{ asset('assets/js/popper.min.js') }}"></script>
+        <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('assets/js/slippry.min.js') }}"></script>
+        <script src="{{ asset('assets/js/jquery.easing.min.js') }}"></script>
+        <script src="{{ asset('assets/js/skrollr.min.js') }}"></script>
+        <script src="{{ asset('assets/js/imagesloaded.js') }}"></script>
+        <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
+        <script src="{{ asset('assets/js/portfolio.js') }}"></script>
+        <script src="{{ asset('assets/js/load.js') }}"></script>
+        <script src="{{ asset('assets/js/map.js') }}"></script>
+        <script src="{{ asset('assets/js/functions.js') }}"></script>
 
-        <!-- jQuery -->
-        <script src="{{ asset('assets/js/vendors/jquery/jquery-1.11.1.min.js') }}"></script>
-
-        <!-- Respond.js media queries for IE8 -->
-        <script src="{{ asset('assets/js/vendors/respond.min.js') }}"></script>
-
-        <!-- Bootstrap-->
-        <script src="{{ asset('assets/js/vendors/bootstrap.min.js') }}" ></script>
-
-        <!-- Owl Carousel -->
-        <script src="{{ asset('assets/js/vendors/owl-carousel/owl.carousel.js') }}"></script>
-
-        <!-- Slider Revolution -->
-        <script src="{{ asset('assets/js/vendors/revolution/js/jquery.themepunch.plugins.min.js') }}"></script>
-        <script src="{{ asset('assets/js/vendors/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
-
-        <!-- Gmaps -->
-        {#<script src="http://maps.google.com/maps/api/js?sensor=true" ></script>
-        <script src="{{ asset('assets/js/vendors/gmaps.js') }}" ></script>#}
-
-        <script src="{{ asset('assets/js/vendors/bootstrap-slider.js') }}" ></script>
-        <script src="{{ asset('assets/js/vendors/jquery/jquery.nav.js') }}" ></script>
-
-        <!-- Custom -->
-        <script src="{{ asset('assets/js/script.js') }}"  ></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123356486-1"></script>
         <script>

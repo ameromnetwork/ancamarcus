@@ -1,24 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<!-- begin Content -->
-<section>
-
-
-    <!-- begin Slider -->
-    <div class="bannercontainer">
-        {% include 'Header/bannercontainer/_slider.html.twig' %}
-        {% include 'Header/bannercontainer/_high_boxes.html.twig' %}
-        {% include 'Header/bannercontainer/_highlights.html.twig' %}
-    </div>
-    <!-- end Slider -->
-
-
-    {% include 'Homepage/blocks/_about.html.twig' %}
+{#<section>#}
+    {#{% include 'Homepage/blocks/_about.html.twig' %}#}
     {#{% include 'Homepage/blocks/_programs.html.twig' %}#}
-    {% include 'Homepage/blocks/_trainers.html.twig' %}
+    {#{% include 'Homepage/blocks/_trainers.html.twig' %}#}
+{#</section>#}
+    {% include 'Header/_slider.html.twig' %}
+    {% include 'Homepage/blocks/_about.html.twig' %}
 
-
-</section>
-    <!-- end Content -->
 {% endblock %}
