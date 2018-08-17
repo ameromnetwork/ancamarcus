@@ -1,84 +1,59 @@
 {% extends 'base.html.twig' %}
 
-{% block header %}
 
-    <div class="title title-contact">
-        <div class="container">
-            <h1>Contact</h1>
-        </div>
-    </div>
-
-{% endblock %}
 
 {% block body %}
-<!-- begin Content -->
-<section>
-
-    <!-- begin Timetable -->
-    <article class="contact">
-        <div class="container">
-            {#<div class="map" id="map2"></div>#}
-            <div class="row">
-                <div class="col-md-8">
-                    <h6 class="contact-form-title">Ask me anything!</h6>
-                    {{ form_start(form) }}
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
+    {% include 'CommonElements/_slider_css.html.twig' %}
+    <div class="spacer-100"></div>
+    <div class="container center" id="contact">
+        <div class="title">{{ 'contact.title'|trans }}</div>
+        <div class="contact row">
+            <div class="col left">
+                {{ form_start(form, {'attr': {'class': 'contact-form'} }) }}
+                    <div id="personal">
+                        <div class="control-group"><!--name field-->
+                            <div class="controls">
                                 {{ form_widget(form.completeName) }}
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
+                        <div class="control-group"><!--email field-->
+                            <div class="controls">
                                 {{ form_widget(form.email) }}
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
+                        <div class="control-group"><!--email field-->
+                            <div class="controls">
                                 {{ form_widget(form.subject) }}
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
+                        <div class="control-group"><!--message field-->
+                            <div class="controls">
                                 {{ form_widget(form.message) }}
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button class="btn btn-form" type="submit"><i class="icon-mail"></i>Send Id</button>
+                        <div class="control-group">
+                            <div class="controls right">
+                                <button type="submit" class="btn-main">{{ 'submitBtt'|trans }} <i class="fa fa-send" aria-hidden="true"></i></button>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-response">{{ include('CommonElements/_flash-messages.html.twig') }}</div>
-                        </div>
+                    <div class="notifications">
+                        <div id="contactFormSent" class="formSent alert alert-success"> {{ include('CommonElements/_flash-messages.html.twig') }}</div>
+                        {#<div id="contactFormSent" class="formSent alert alert-success"> <strong>Your Message Has Been Sent!</strong> Thank you for contacting us.</div>#}
+                        {#<div id="contactFormError" class="formError alert alert-error"> <strong>Oops, An error has ocurred!</strong> See the marked fields above to fix the errors.</div>#}
                     </div>
-
-                    {{ form_end(form) }}
-                </div>
-
-                <div class="col-md-4">
-                    <h6 class="contact-form-title">Information</h6>
-                    <p>My commitment for you is to answer and be available ASAP. However, if this is not possible during your time, I will make sure I'll get back to you within 1 day.</p>
-                    <address>
-                        <p><i class="icon-location"></i>Santa Monica, California, USA</p>
-                        {#<p><i class="icon-clock"></i>Monday to friday from 8AM to 7PM</p>#}
-                        <p><i class="icon-mail"></i><a href="mailto:ancamarcusfit@gmail.com">ancamarcusfit@gmail.com</a></p>
-                        <p><i class="icon-mobile"></i>+1 (310) 795-2020</p>
-                    </address>
-                </div>
-
+                {{ form_end(form) }}
+            </div>
+            <div class="col left">
+                <div class="contact-logo">{{ 'project.name'|trans }}</div>
+                <div class="info">{{ 'project.address'|trans }}<br>
+                    Tel: {{ 'project.phone1'|trans }}<br>
+                    <a href="{{ 'project.url'|trans }}">{{ 'project.url1'|trans }}</a> | <a href="mailto:{{ 'project.email1'|trans }}">{{ 'project.email1'|trans }}</a></div>
+                <p>{{ 'contact.content.info.txt'|trans }}</p>
             </div>
         </div>
-    </article>
-    <!-- end Timetable -->
+    </div>
 
-</section>
-<!-- end Content -->
+
+
 {% endblock %}

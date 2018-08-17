@@ -1,0 +1,45 @@
+project:
+  name:             ANCA MARCUS FIT
+  businessName:     ANCA MARCUS FIT
+  businessTitle:    Anca Marcus Fitness
+  logoName:         ANCAMARCUSFIT
+  secondName:       keywords here
+  businessDesc:     keywords here
+  businessKeywords: keywords here
+  webAuthor:        Catalin Manea | C-iT
+  address:          Santa Monica, California, USA
+  url:              http://ancamarcusfit.com/
+  url1:             ancamarcusfit.com
+#  footerCopyright:
+  version:          1.0
+  phone1:           +1 (310) 795-2020
+#  phone2:
+#  phone3:
+  email1:           fitness@ancamarcusfit.com
+  email2:           ancamarcusfit@gmail.com
+#  businessHours:
+
+#header:
+#
+#
+footer:
+  copyright:       All Rights reserved
+#
+#
+social:
+  facebook:         https://www.facebook.com/Ancamarcusfitness/
+  yelp:
+  twitter:          https://twitter.com/AncaMarcusfit
+  googlePlus:
+  skype:
+  linkedin:
+  youtube:
+  pinterest:
+  instagram:        https://www.instagram.com/ancamarcusfitness/
+#
+#
+contact:
+  title:            CONTACT - ANCA MARCUS
+  submitBtt:        Send
+  content:
+    info.txt:         My commitment for you is to answer and be available ASAP. However, if this is not possible during your time, I will make sure I'll get back to you within 1 day.

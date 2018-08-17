@@ -3,25 +3,81 @@
 
 {% block body %}
 
-    <div class="spacer-160"></div>
-    <div class="section" id="services">
-        <div class="container center services">
-            <div class="title">Trainer Bio</div>
+    {#<div class="spacer-100"></div>#}
+    {#<div class="section" id="services">#}
+        {#<div class="container center services">#}
+            {#<div class="title">Trainer Bio</div>#}
+        {#</div>#}
+    {#</div>#}
+    {#<!-- begin Content -->#}
+    {#<div class="spacer-80"></div>#}
+
+
+
+    {#<section style="background-color: #FFFFFF;">#}
+        {#<!-- begin Trainers -->#}
+        {#<article class="trainers trainers-single">#}
+            {#<div class="container">#}
+                {#{% include 'Bio/blocks/_trainer.html.twig' %}#}
+            {#</div>#}
+        {#</article>#}
+        {#<!-- end Trainers -->#}
+    {#</section>#}
+    {#<!-- end Content -->#}
+
+
+
+
+    {% include 'CommonElements/_slider_css.html.twig' %}
+    <div class="section">
+        <div class="container project-page">
+            <div class="white-box center">
+                {#<div class="pager"><a class="prev"><span>Previous Project</span></a><a class="next"><span>Next Project</span></a></div>#}
+                <div class="row">
+                    <div class="col">
+                        <!-- 1st column - Gallery -->
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active"> <img class="d-block img-fluid" src="{{ asset('assets/images/trainers/trainer-anca.jpg') }}" alt="Anca Marcus"></div>
+                                {#<div class="carousel-item"> <img class="d-block img-fluid" src="images/projects/02.jpg" alt="Elegance"> </div>#}
+                                {#<div class="carousel-item"> <img class="d-block img-fluid" src="images/projects/03.jpg" alt="Elegance"> </div>#}
+                            </div>
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                {#<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>#}
+                                {#<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>#}
+                            </ol>
+
+                            {#<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">#}
+                                {#<span class="carousel-control-prev-icon" aria-hidden="true"></span>#}
+                                {#<span class="sr-only">Previous</span>#}
+                            {#</a>#}
+                            {#<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">#}
+                                {#<span class="carousel-control-next-icon" aria-hidden="true"></span>#}
+                                {#<span class="sr-only">Next</span>#}
+                            {#</a>#}
+                        </div>
+                    </div>
+                    <div class="col project-info">
+                        <div class="title">Trainer Bio</div>
+                        <div class="spacer-40"></div>
+
+                        <!-- 2nd column - Content -->
+                        <ul>
+                            <li class="description">
+
+                                {% include 'Bio/blocks/_bio_text.html.twig' %}
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- begin Content -->
-    <div class="spacer-80"></div>
 
 
 
-    <section style="background-color: #FFFFFF;">
-        <!-- begin Trainers -->
-        <article class="trainers trainers-single">
-            <div class="container">
-                {% include 'Bio/blocks/_trainer.html.twig' %}
-            </div>
-        </article>
-        <!-- end Trainers -->
-    </section>
-    <!-- end Content -->
 {% endblock %}
