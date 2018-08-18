@@ -48,7 +48,7 @@ body {
 	position: relative!important;
 }
 a, a:link {
-	color: #AB9D6B;
+	color: goldenrod;
 	font-weight: 400;
 	-webkit-transition: all .2s ease-out;
 	-moz-transition: all .2s ease-out;
@@ -56,7 +56,7 @@ a, a:link {
 	transition: all .2s ease-out;
 }
 a:hover {
-	color: #918354;
+	color: goldenrod;
 	-webkit-transition: all .2s ease-out;
 	-moz-transition: all .2s ease-out;
 	-o-transition: all .2s ease-out;
@@ -120,7 +120,7 @@ a:hover {
 	margin-left: 40px;
 }
 .nav-item a.nav-link.active, .nav-item .nav-link:hover {
-	color: #918354!important;
+	color: goldenrod!important;
 }
 li.nav-item {
 	float: right;
@@ -157,7 +157,7 @@ a.nav-link.flag img {
 }
 .navbar-light .navbar-toggler {
 	border-color: rgba(0,0,0,.0)!important;
-	color: #918354!important;
+	color: goldenrod!important;
 }
 .navbar-light .navbar-toggler:hover {
 	color: #4a4a4a!important;
@@ -217,7 +217,7 @@ a.nav-link.flag img {
 	color: #ffffff!important;
 	min-width: 50px;
 	padding: 15px 35px;
-	background-color: #AB9D6B;
+	background-color: goldenrod;
 	display: inline-block;
 	-webkit-transition: all .2s ease-out;
 	-moz-transition: all .2s ease-out;
@@ -225,7 +225,7 @@ a.nav-link.flag img {
 	transition: all .2s ease-out;
 }
 .btn-main:hover {
-	background-color: #918354;
+	background-color: goldenrod;
 	-webkit-transition: all .2s ease-out;
 	-moz-transition: all .2s ease-out;
 	-o-transition: all .2s ease-out;
@@ -249,7 +249,7 @@ a.nav-link.flag img {
 	transition: all .2s ease-out;
 }
 .btn-download:hover {
-	background-color: #918354;
+	background-color: goldenrod;
 	-webkit-transition: all .2s ease-out;
 	-moz-transition: all .2s ease-out;
 	-o-transition: all .2s ease-out;
@@ -274,7 +274,7 @@ a.nav-link.flag img {
 	border-radius: 0;
 }
 .sy-pager li.sy-active a {
-	background-color: #918354;
+	background-color: goldenrod;
 }
 .sy-controls li {
 	width: 10%;
@@ -330,7 +330,7 @@ span.carousel-control-next-icon {
 .white-box span {
 	font-size: 18px;
 	line-height: 30px;
-	color: #AB9D6B;
+	color: goldenrod;
 	text-align: center;
 	letter-spacing: 8px;
 	padding: 20px 0;
@@ -369,7 +369,7 @@ span.carousel-control-next-icon {
 	height: 300px;
 }
 .services .service-content-box {
-	background: #AB9D6B;
+	background: goldenrod;
 	opacity: 0.9;
 	padding: 40px;
 	color: #ffffff;
@@ -398,7 +398,7 @@ span.carousel-control-next-icon {
 	text-transform: uppercase;
 	letter-spacing: 8px;
 	line-height: 60px;
-	color: #AB9D6B;
+	color: goldenrod;
 	width: 100%;
 	text-align: center;
 	display: inline-block;
@@ -417,7 +417,7 @@ span.carousel-control-next-icon {
 	font-size: 12px;
 	font-weight: 700;
 	text-align: right;
-	color: #918354;
+	color: goldenrod;
 	text-transform: uppercase;
 	line-height: auto;
 }
@@ -443,7 +443,7 @@ span.carousel-control-next-icon {
 	transition: all .2s ease-out;
 }
 .team .team-social a:hover {
-	color: #918354;
+	color: goldenrod;
 	-webkit-transition: all .2s ease-out;
 	-moz-transition: all .2s ease-out;
 	-o-transition: all .2s ease-out;
@@ -504,7 +504,7 @@ section {
 	text-transform: uppercase;
 	letter-spacing: 8px;
 	line-height: 60px;
-	color: #AB9D6B;
+	color: goldenrod;
 	text-align: center;
 	display: inline-block;
 	padding: 40px 100px;
@@ -653,10 +653,10 @@ section {
 	transition: all .2s ease-out;
 }
 .button:hover {
-	color: #918354;
+	color: goldenrod;
 }
 .button:active, .button.is-checked {
-	color: #918354;
+	color: goldenrod;
 }
 .button-group {
 	margin-bottom: 20px;
@@ -718,7 +718,7 @@ section {
 	font-size: 12px;
 	color: #ffffff;
 	text-align: center;
-	background-color: #918354;
+	background-color: goldenrod;
 	opacity: 0;
 	width: 100%;
 	height: 100%;
@@ -786,7 +786,7 @@ section {
 .project-page .project-info span {
 	width: auto;
 	margin-left: 10px;
-	color: #918354;
+	color: goldenrod;
 	letter-spacing: 0px;
 	font-size: 15px;
 	padding:0;
@@ -869,7 +869,7 @@ section {
 	background-color: #DAD1B5;
 }
 .carousel-indicators .active{
-	background-color: #918354;
+	background-color: goldenrod;
 }
 
 /* Milestones */
@@ -878,7 +878,7 @@ section {
 	text-align: center;
 }
 .highlight {
-	color: #918354;
+	color: goldenrod;
 	padding: 20px 0;
 	font-weight: 100;
 	display: block;
@@ -887,7 +887,7 @@ section {
 	font-size: 80px;
 }
 .stat i {
-	color: #918354;
+	color: goldenrod;
 }
 .milestone-details {
 	font-weight: 700;
@@ -928,7 +928,7 @@ section {
 	margin: 10px 0;
 	height: 50px;
 	border: 1px solid #DAD1B5;
-	color: #AB9D6B;
+	color: goldenrod;
 	width: 100%;
 	text-align: right;
 	font-weight: 300;
@@ -941,7 +941,7 @@ section {
 	margin: 10px 0;
 	height: 250px;
 	border: 1px solid #DAD1B5;
-	color: #AB9D6B;
+	color: goldenrod;
 	width: 100%;
 	font-weight: 300;
 	padding: 10px 20px;
@@ -1007,7 +1007,7 @@ section {
 	font-size: 25px;
 	text-transform: uppercase;
 	text-align: center;
-	background: #918354;
+	background: goldenrod;
 	-webkit-transition: all .2s ease-out;
 	-moz-transition: all .2s ease-out;
 	-o-transition: all .2s ease-out;
@@ -1063,7 +1063,7 @@ section {
 	transition: all .2s ease-out;
 }
 #footer .footer-social a:hover, #footer .footer-social a:focus {
-	color: #AB9D6B;
+	color: goldenrod;
 	-webkit-transition: all .2s ease-out;
 	-moz-transition: all .2s ease-out;
 	-o-transition: all .2s ease-out;

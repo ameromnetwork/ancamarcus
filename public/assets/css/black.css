@@ -36,14 +36,14 @@ a:hover {
 /* ================================= */
 
 .nav-item a.nav-link.active, .nav-item .nav-link:hover {
-	color: #918354!important;
+	color: goldenrod!important;
 }
 .nav-item .nav-link {
 	color: #ffffff!important;
 }
 .navbar {
 	background-color: #252525;
-	border-bottom: 1px solid #918354;
+	border-bottom: 1px solid goldenrod;
 }
 .navbar-brand {
 	color: #ffffff!important;
@@ -55,16 +55,16 @@ a:hover {
 
 .white-box {
 	background: #181818;
-	border: 2px solid #918354;
+	border: 2px solid goldenrod;
 }
 .white-box span {
-	color: #918354;
+	color: goldenrod;
 }
 .btn-main, .btn-download {
-	background-color: #918354;
+	background-color: goldenrod;
 }
 .btn-main:hover, .btn-download:hover {
-	background-color: #AB9D6B;
+	background-color: goldenrod;
 }
 
 .title {
@@ -89,7 +89,7 @@ a:hover {
 	color: #555555;
 }
 .team .team-social a:hover {
-	color: #918354;
+	color: goldenrod;
 }
 
 /* Milestones */
@@ -102,12 +102,12 @@ a:hover {
 	color: #ffffff;
 }
 .contact-form input {
-	border: 1px solid #918354;
+	border: 1px solid goldenrod;
 	color: #DAD1B5;
 	background: #1C1C1C;
 }
 .contact-form textarea {
-	border: 1px solid #918354;
+	border: 1px solid goldenrod;
 	color: #DAD1B5;
 	background: #1C1C1C;
 }

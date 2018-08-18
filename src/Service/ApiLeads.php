@@ -23,10 +23,8 @@ class ApiLeads
      */
     public function postContactRequest(Contact $contact, array $formData)
     {
-//        list($firstName, $lastName) = \explode(' ', $contact->getFirstName());
-
         $data = [
-            'label' => $contact->getFirstName(),
+            'label' => \sprintf('%s %s', $contact->getFirstName(), $contact->getLastName()),
             'first_name' => $contact->getFirstName(),
             'last_name' => $contact->getLastName(),
             'email' => $contact->getEmail(),

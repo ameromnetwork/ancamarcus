@@ -67,14 +67,12 @@ class Contact
         return $this->firstName;
     }
 
-
     public function setFirstName(string $firstName): self
     {
         $this->firstName = $firstName;
 
         return $this;
     }
-
 
     public function getLastName()
     {
@@ -87,7 +85,6 @@ class Contact
 
         return $this;
     }
-
 
     public function getEmail(): ?string
     {
