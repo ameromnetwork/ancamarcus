@@ -23,12 +23,12 @@ class ApiLeads
      */
     public function postContactRequest(Contact $contact, array $formData)
     {
-        list($firstName, $lastName) = \explode(' ', $contact->getCompleteName());
+//        list($firstName, $lastName) = \explode(' ', $contact->getFirstName());
 
         $data = [
-            'label' => $contact->getCompleteName(),
-            'first_name' => $firstName,
-            'last_name' => $lastName,
+            'label' => $contact->getFirstName(),
+            'first_name' => $contact->getFirstName(),
+            'last_name' => $contact->getLastName(),
             'email' => $contact->getEmail(),
             'conversion_amount' => 0.0,
             'service_target' => 'ANCAMARCUSFIT',

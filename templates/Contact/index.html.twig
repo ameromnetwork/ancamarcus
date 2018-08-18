@@ -13,7 +13,12 @@
                     <div id="personal">
                         <div class="control-group"><!--name field-->
                             <div class="controls">
-                                {{ form_widget(form.completeName) }}
+                                {{ form_widget(form.firstName) }}
+                            </div>
+                        </div>
+                        <div class="control-group"><!--name field-->
+                            <div class="controls">
+                                {{ form_widget(form.lastName) }}
                             </div>
                         </div>
                         <div class="control-group"><!--email field-->
@@ -33,7 +38,7 @@
                         </div>
                         <div class="control-group">
                             <div class="controls right">
-                                <button type="submit" class="btn-main">{{ 'submitBtt'|trans }} <i class="fa fa-send" aria-hidden="true"></i></button>
+                                <button type="submit" class="btn-main">{{ 'contact.submitBtt'|trans }} <i class="fa fa-send" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>

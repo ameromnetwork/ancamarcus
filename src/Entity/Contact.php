@@ -28,7 +28,12 @@ class Contact
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $completeName;
+    private $firstName;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $lastName;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -57,17 +62,32 @@ class Contact
         return $this->id;
     }
 
-    public function getCompleteName(): ?string
+    public function getFirstName(): ?string
     {
-        return $this->completeName;
+        return $this->firstName;
     }
 
-    public function setCompleteName(string $completeName): self
+
+    public function setFirstName(string $firstName): self
     {
-        $this->completeName = $completeName;
+        $this->firstName = $firstName;
 
         return $this;
     }
+
+
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    public function setLastName(string $lastName): self
+    {
+        $this->lastName = $lastName;
+
+        return $this;
+    }
+
 
     public function getEmail(): ?string
     {
