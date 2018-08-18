@@ -129,7 +129,8 @@ a:hover {
 /* ================================= */
 
 .navbar .nav-link {
-	font-size: 13px;
+	font-size: 14px;
+	font-family: 'Ubuntu Mono', 'Montserrat',sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin-left: 40px;
@@ -349,6 +350,7 @@ span.carousel-control-next-icon{
 .white-box p {
 	padding: 20px;
 	text-align: justify;
+	font-size: 15px;
 }
 .white-box-link {;
 	width: 100%;
@@ -402,7 +404,7 @@ span.carousel-control-next-icon{
 	display: inline-block;
 }
 .title {
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: 200;
 	text-transform: uppercase;
 	letter-spacing: 8px;
