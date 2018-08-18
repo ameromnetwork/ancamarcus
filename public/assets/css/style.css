@@ -1255,9 +1255,9 @@ and (orientation : portrait) {
 
 .logo-text {
 	padding:20px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Ubuntu Mono', monospace;
 	text-transform: uppercase;
-	font-size: 25px;
+	font-size: 30px;
 	color: #5e5e5e;
 	margin-top:10px;
 }
