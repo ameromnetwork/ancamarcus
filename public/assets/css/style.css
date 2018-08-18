@@ -11,7 +11,7 @@
 2. Header / .navbar
 3. Content
 	- Main Styles
-	- Slider 
+	- Slider
 	- About Us / .white-box
 	- Services / .services
 	- Team / .team
@@ -1126,7 +1126,7 @@ section {
 .navbar {
 	height: auto!important;
 }
-	
+
 #menuCollapse .navbar-nav {
 	margin: 10px 0;
 	background: #ffffff;
@@ -1164,8 +1164,8 @@ section {
 }
 .spacer-160 {
 	height: 80px;
-}	
-	
+}
+
 .home-content .btn-main{
 	margin-bottom: 30px;
 }
@@ -1198,11 +1198,11 @@ section {
 }
 }
 
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) { 
-	
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+
 .bcg {
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -1214,10 +1214,10 @@ and (orientation : landscape) {
 }
 }
 
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) { 
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
 
 .navbar {
 	height: 74px!important;
@@ -1251,4 +1251,17 @@ and (orientation : portrait) {
 }
 
 @media only screen and (max-width: 320px) {
+}
+
+.logo-text {
+	padding:20px;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	font-size: 25px;
+	color: #5e5e5e;
+	margin-top:10px;
+}
+
+.logo-text .logo-text-highlight {
+	color:goldenrod;
 }

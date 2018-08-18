@@ -2,16 +2,6 @@ body {
     background-color: lightgray;
 }
 
-.logo-text {
-    padding:20px;
-    font-family: "Roboto Condensed";
-
-    text-transform: uppercase;
-    font-size: 30px;
-    color: #5e5e5e;
-    margin-top:10px;
-}
-
 .post-content {
     font-family: 'Raleway', sans-serif !important;
     font-size:18px !important;
