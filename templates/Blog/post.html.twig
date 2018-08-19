@@ -8,13 +8,14 @@
         <div class="container project-page">
             <div class="white-box center">
                 <div class="row">
-
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <div class="post-content" style="background-color: #FFFFFF; padding: 20px;">
+                    <div class="col-md-12">
+                        <div class="post-content" style="background-color: #FFFFFF; padding: 5px;">
                             <h5 style="text-align: center;">{{ post.createdAt|date('M d, Y @ H:i A') }} by <span>{{ post.author.name }}</span></h5>
                             <h4 style="text-align: center;">{{ post.description }}</h4>
-                            {{ post.body|raw }}
+                            <hr style="border-color: goldenrod;" />
+                            <article class="blog-article">
+                                {{ post.body|raw }}
+                            </article>
                         </div>
                     </div>
                     <div class="col-md-2"></div>

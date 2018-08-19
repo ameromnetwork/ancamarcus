@@ -145,7 +145,7 @@ a:hover {
 	padding: 20px 40px!important;
 	background-color: #fefefe;
 	height: 74px!important;
-	border-bottom: 1px solid #DAD1B5;
+	border-bottom: 1px solid goldenrod;
 
 }
 .navbar-brand {
@@ -251,7 +251,7 @@ a.nav-link.flag img {
 	color: #ffffff!important;
 	min-width: 50px;
 	padding: 15px 35px;
-	background-color: #DAD1B5;
+	background-color: goldenrod;
 	display: inline-block;
 	margin-top: 20px;
 	-webkit-transition: all .2s ease-out;
@@ -277,7 +277,7 @@ a.nav-link.flag img {
 	border-radius: 0;
 }
 .sy-pager li a{
-	background-color: #DAD1B5;
+	background-color: goldenrod;
 	text-indent: -9999px;
 	-webkit-background-size: 20px;
 	background-size: 20px;
@@ -333,7 +333,7 @@ span.carousel-control-next-icon{
 .white-box {
 	padding: 20px 40px;
 	background: #ffffff;
-	border: 2px solid #DAD1B5;
+	border: 2px solid goldenrod;
 	width: 100%;
 	margin-top: -300px;
 }
@@ -519,7 +519,7 @@ section {
 	text-align: center;
 	display: inline-block;
 	padding: 40px 100px;
-	border: 2px solid #DAD1B5;
+	border: 2px solid goldenrod;
 	background-color: rgba(0,0,0,0.70)
 }
 .hsContent h2 span {
@@ -786,7 +786,7 @@ section {
 	padding-top: 40px;
 	margin-top: 40px;
 	margin-right: 40px;
-	border-top: 1px solid #DAD1B5;
+	border-top: 1px solid goldenrod;
 }
 
 .project-page .project-info span {
@@ -873,7 +873,7 @@ section {
 	position: relative;
 }
 .carousel-indicators li{
-	background-color: #DAD1B5;
+	background-color: goldenrod;
 }
 .carousel-indicators .active{
 	background-color: goldenrod;
@@ -933,7 +933,7 @@ section {
 .contact-form input {
 	margin: 10px 0;
 	height: 50px;
-	border: 1px solid #DAD1B5;
+	border: 1px solid goldenrod;
 	color: goldenrod;
 	width: 100%;
 	font-weight: 300;
@@ -945,7 +945,7 @@ section {
 .contact-form textarea {
 	margin: 10px 0;
 	height: 160px;
-	border: 1px solid #DAD1B5;
+	border: 1px solid goldenrod;
 	color: goldenrod;
 	width: 100%;
 	font-weight: 300;
@@ -1022,7 +1022,7 @@ section {
 }
 #myBtn:hover {
 	opacity: 1;
-	background: #DAD1B5;
+	background: goldenrod;
 	-webkit-transition: all .2s ease-out;
 	-moz-transition: all .2s ease-out;
 	-o-transition: all .2s ease-out;
@@ -1267,3 +1267,17 @@ and (orientation : portrait) {
 .logo-text .logo-text-highlight {
 	color:goldenrod;
 }
+
+article.blog-article {
+    padding:20px;
+}
+
+article.blog-article p, ul, li {
+    padding:0 !important;
+    text-align: left;
+}
+
+article.blog-article li {
+    margin-left: 30px;
+}
+

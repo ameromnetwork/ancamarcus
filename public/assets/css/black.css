@@ -103,12 +103,12 @@ a:hover {
 }
 .contact-form input {
 	border: 1px solid goldenrod;
-	color: #DAD1B5;
+	color: goldenrod;
 	background: #1C1C1C;
 }
 .contact-form textarea {
 	border: 1px solid goldenrod;
-	color: #DAD1B5;
+	color: goldenrod;
 	background: #1C1C1C;
 }
 

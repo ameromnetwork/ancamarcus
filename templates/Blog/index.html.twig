@@ -12,10 +12,10 @@
                     <div class="col-md-12">
                         <h3>Recent posts...</h3>
                         {% for post in posts if posts is not empty %}
-                            <hr />
-                            <h4><a href="{{ path('blog_post', { slug: post.slug }) }}">{{ post.title }}</a></h4>
+                            <hr style="border-color: goldenrod;" />
+                            <h4><a href="{{ path('blog_post', { slug: post.slug }) }}" style="text-decoration: none;">{{ post.title }}</a></h4>
                             <small>by {{ post.author.name }} on {{ post.createdAt|date('M d, Y H:i A') }}</small>
-                            <p style="margin-top:10px;">{{ post.description }}</p>
+                            <p>{{ post.description }}</p>
                         {% endfor %}
                         <hr />
                     </div>
