@@ -532,19 +532,19 @@ section {
 
 /* Slide 1 */
 #slide-1 .bcg {
-	background-image: url('../images/parallax-back/parallax-01.jpg');
+	background-image: url('../images/parallax-back/1.jpg');
 }
 #slide-1 .hsContent {
 }
 /* Slide 2 */
 #slide-2 .bcg {
-	background-image: url('../images/parallax-back/parallax-02.jpg');
+	background-image: url('../images/parallax-back/2.jpg');
 }
 #slide-2 .hsContent {
 }
 /* Slide 3 */
 #slide-3 .bcg {
-	background-image: url('../images/parallax-back/parallax-03.jpg');
+	background-image: url('../images/parallax-back/3.jpg');
 }
 #slide-3 .hsContent {
 }
@@ -1115,3 +1115,11 @@ article.blog-article li {
     margin-left: 30px;
 }
 
+/**
+* Bio Page
+ */
+.bioImg {
+	max-width: 500px;
+	float:left;
+	padding-right:20px;
+}
