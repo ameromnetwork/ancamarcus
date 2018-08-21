@@ -788,9 +788,9 @@ section {
 }
 
 .project-page .project-info li.description{
-	padding-top: 40px;
-	margin-top: 40px;
-	margin-right: 40px;
+	padding-top: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
 	border-top: 1px solid goldenrod;
 }
 
