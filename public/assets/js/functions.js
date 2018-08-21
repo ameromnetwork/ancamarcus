@@ -77,7 +77,7 @@ $(document).ready(function ($) {
 	var $slide = $('.homeSlide');
 	var $body = $('body');
 
-	//FadeIn all sections   
+	//FadeIn all sections
 	$body.imagesLoaded(function () {
 		setTimeout(function () {
 

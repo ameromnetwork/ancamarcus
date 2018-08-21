@@ -215,6 +215,7 @@ a.nav-link.flag img {
 }
 .sy-box {
 	margin-top: 74px;
+	height:500px;
 }
 .section a, .section a:link {
 	text-decoration: underline;
@@ -914,6 +915,11 @@ section {
 	overflow: hidden;
 }
 /* Contact */
+.info {
+	margin: 20px 0 40px 0;
+	font-family: inherit;
+	text-align: justify;
+}
 .contact {
 	margin: 60px 0;
 }
@@ -931,6 +937,7 @@ section {
 .contact .info {
 	margin: 20px 0 40px 0;
 	font-family: inherit;
+	text-align: justify;
 }
 .contact-form {
 	width: 90%;
@@ -1124,3 +1131,5 @@ article.blog-article li {
 	float:left;
 	padding-right:20px;
 }
+
+
