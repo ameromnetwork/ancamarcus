@@ -8,6 +8,7 @@
 
 namespace App\Controller;
 
+use App\Repository\WorkoutProgramRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -16,8 +17,12 @@ class WorkoutProgramsController extends AbstractController
     /**
      * @Route("/workout-programs", name="workout_programs_index")
      */
-    public function index()
+    public function index(WorkoutProgramRepository $workoutProgramRepository)
     {
-        return $this->render('WorkoutPrograms/index.html.twig');
+        $workouts = $workoutProgramRepository->findBy([
+            'parent' => null,
+        ]);
+
+        return $this->render('WorkoutPrograms/index.html.twig', \compact('workouts'));
     }
 }

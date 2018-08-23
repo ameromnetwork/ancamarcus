@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -49,11 +50,19 @@ class User implements UserInterface
     private $facebookId;
 
     /**
+     * @var \Doctrine\Common\Collections\ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="App\Entity\WorkoutProgram", mappedBy="user", cascade={"persist", "remove"})
+     */
+    protected $workoutPrograms;
+
+    /**
      * User constructor.
      */
     public function __construct()
     {
         $this->apiKey = \sha1(\uniqid().\time());
+        $this->workoutPrograms = new ArrayCollection();
     }
 
     /**
@@ -148,6 +157,35 @@ class User implements UserInterface
     public function setFacebookId($facebookId): self
     {
         $this->facebookId = $facebookId;
+
+        return $this;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getWorkoutPrograms(): ?\Doctrine\Common\Collections\ArrayCollection
+    {
+        return $this->workoutPrograms;
+    }
+
+    public function addWorkoutProgram(WorkoutProgram $workoutProgram): self
+    {
+        $workoutProgram->setUser($this);
+
+        $this->workoutPrograms->add($workoutProgram);
+
+        return $this;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\ArrayCollection $workoutPrograms
+     *
+     * @return User
+     */
+    public function setWorkoutPrograms(\Doctrine\Common\Collections\ArrayCollection $workoutPrograms): self
+    {
+        $this->workoutPrograms = $workoutPrograms;
 
         return $this;
     }
