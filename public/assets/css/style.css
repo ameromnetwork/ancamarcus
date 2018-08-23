@@ -408,7 +408,6 @@ span.carousel-control-next-icon{
 	font-size: 30px;
 	font-weight: 200;
 	text-transform: uppercase;
-	letter-spacing: 8px;
 	line-height: 60px;
 	color: goldenrod;
 	width: 100%;
@@ -417,7 +416,7 @@ span.carousel-control-next-icon{
 	background: url("../images/el-gold.svg");
 	background-repeat: no-repeat;
 	background-size: 111px;
-	padding: 40px 0;
+	padding:10px;
 	background-position: center;
 }
 /* Team */
@@ -789,9 +788,6 @@ section {
 }
 
 .project-page .project-info li.description{
-	padding-top: 10px;
-	margin-top: 10px;
-	margin-right: 10px;
 	border-top: 1px solid goldenrod;
 }
 
@@ -1132,4 +1128,8 @@ article.blog-article li {
 	padding-right:20px;
 }
 
+article.bio p {
+	padding:0;
+	margin-top: 30px;
+}
 

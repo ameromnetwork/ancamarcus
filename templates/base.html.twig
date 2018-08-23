@@ -28,29 +28,12 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
         <!-- Favicon -->
         <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
-
         <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
-
         {% endblock %}
-
     </head>
-    {#<body data-spy="scroll" data-target="#navbar" data-offset="10">#}
     <body >
-
-    <!-- Loading Site -->
-    {#{% include 'Header/_loader.html.twig' %}#}
-    <!-- HEADER -->
     {% include 'Header/_header.html.twig' %}
-
-
-    {% block body %}
-
-    {% endblock %}
-
-
-
-
-
+    {% block body %}{% endblock %}
     <!-- Scroll Up -->
     <button onclick="topFunction();" id="myBtn"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
     <!-- FOOTER -->
@@ -60,26 +43,25 @@
             <div class="row">
                 <div class="col left">
                     <div class="footer-logo">
-                        {#<img src="images/logo.svg" alt="logo" />#}
-                        {{ 'project.logoName'|trans }}</div>
+                        <a href="{{ path('home_index') }}" style="text-decoration: none;">
+                            <span class="logo-text">ANCAMARCUS<span class="logo-text-highlight">FIT</span></span>
+                        </a>
+                    </div>
                 </div>
                 <div class="col center">
                     <div class="footer-social">
                         <a href="{{ 'social.facebook'|trans }}"><i class="fa fa-facebook"  aria-hidden="true"></i></a>
-                        {#<a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>#}
                         <a href="{{ 'social.twitter'|trans }}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         <a href="{{ 'social.instagram'|trans }}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <div class="col right info">{{ 'footer.copyright'|trans }}</div>
+                <div class="col right info">
+
+                </div>
             </div>
         </div>
     </footer>
-
-
     {% block javascripts %}
-
-
         <script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
         <script src="{{ asset('assets/js/popper.min.js') }}"></script>
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
@@ -91,7 +73,6 @@
         <script src="{{ asset('assets/js/portfolio.js') }}"></script>
         {#<script src="{{ asset('assets/js/load.js') }}"></script>#}
         <script src="{{ asset('assets/js/functions.js') }}"></script>
-
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123356486-1"></script>
         <script>
@@ -100,7 +81,6 @@
             gtag('js', new Date());
             gtag('config', 'UA-123356486-1');
         </script>
-
     {% endblock %}
     {% block extra_scripts %}{% endblock %}
     </body>
