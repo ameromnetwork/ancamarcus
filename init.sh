@@ -1,4 +1,4 @@
-./cachefix
+./cachefix.sh
 
 composer install
 
