@@ -1,3 +1,5 @@
+./cachefix
+
 composer install
 
 bin/console cache:clear --env=dev
