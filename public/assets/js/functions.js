@@ -1,30 +1,23 @@
 // Call Main Slider 
 jQuery('#main-slider').slippry({
 	// general elements & wrapper
-
-
 	// options
-	adaptiveHeight: false, // height of the sliders adapts to current slide
+	adaptiveHeight: true, // height of the sliders adapts to current slide
 	start: '1', // num (starting from 1), random
 	loop: true, // first -> last & last -> first arrows
 	captionsSrc: 'li',
 	captions: 'custom', // Position: overlay, below, custom, false
 	captionsEl: '.external-captions',
-
 	// transitions
 	transition: 'fade', // fade, horizontal, kenburns, false
 	easing: 'linear', // easing to use in the animation [(see... [jquery www])]
 	continuous: false,
-
 	// slideshow
 	auto: true
 });
-
 // Call Services Slider 
 jQuery('#services-slider').slippry({
 	// general elements & wrapper
-
-
 	// options
 	adaptiveHeight: false, // height of the sliders adapts to current slide
 	start: '1', // num (starting from 1), random
@@ -32,16 +25,13 @@ jQuery('#services-slider').slippry({
 	captionsSrc: 'li',
 	captions: 'custom', // Position: overlay, below, custom, false
 	captionsEl: '.external-captions',
-
 	// transitions
 	transition: 'horizontal', // fade, horizontal, kenburns, false
 	easing: 'linear', // easing to use in the animation [(see... [jquery www])]
 	continuous: true,
-
 	// slideshow
 	auto: false
 });
-
 // Add smooth scrolling on all links inside the navbar
 jQuery(".navbar a").on('click touch', function (event) {
 	'use strict';
@@ -49,27 +39,20 @@ jQuery(".navbar a").on('click touch', function (event) {
 
 	// Make sure this.hash has a value before overriding default behavior
 	if (this.hash !== "") {
-
 		// Prevent default anchor click behavior
 		event.preventDefault();
-
 		// Store hash
 		var hash = this.hash;
-
 		// Using jQuery's animate() method to add smooth page scroll
 		// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 		$('html, body').animate({
 			scrollTop: $(hash).offset().top
 		}, 800, function () {
-
 			// Add hash (#) to URL when done scrolling (default click behavior)
 			window.location.hash = hash;
 		});
-
 	} // End if
-
 });
-
 $(document).ready(function ($) {
 	'use strict';
 	// Setup variables

@@ -334,7 +334,7 @@ span.carousel-control-next-icon{
 .white-box {
 	padding: 20px 40px;
 	background: #ffffff;
-	border: 2px solid goldenrod;
+	border: 1px dotted goldenrod;
 	width: 100%;
 	margin-top: -300px;
 }
@@ -527,8 +527,12 @@ section {
 }
 
 .homeSlide {
-	min-height: 400px;
-	height:500px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background: url('../images/parallax-back/bio_page_main.jpeg') no-repeat center center fixed;
+
 }
 
 /* Slide 1 */

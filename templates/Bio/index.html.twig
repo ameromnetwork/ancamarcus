@@ -1,12 +1,11 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    {% include 'CommonElements/_slider_css.html.twig' %}
-    <div class="section">
+    <div class="section" style="margin-top: 400px;">
         <div class="container project-page">
             <div class="white-box center">
                 <div class="row">
                     <div class="col-md-12 project-info">
-                        <div class="title">Trainer Bio</div>
+                        <div class="title">Bio</div>
                         <ul>
                             <li class="description">
                                 {% include 'Bio/blocks/_bio_text.html.twig' %}
@@ -17,7 +16,4 @@
             </div>
         </div>
     </div>
-
-
-
 {% endblock %}

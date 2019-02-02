@@ -12,6 +12,9 @@ use App\Repository\WorkoutProgramRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Class WorkoutProgramsController.
+ */
 class WorkoutProgramsController extends AbstractController
 {
     /**

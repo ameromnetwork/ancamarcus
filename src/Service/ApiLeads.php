@@ -45,7 +45,7 @@ class ApiLeads
             CURLOPT_HTTPHEADER,
             array(
                 'Content-Type: application/json',
-                'Content-Length: '.\strlen($encodedData),
+                'Content-Length: '.\mb_strlen($encodedData),
                 'Authorization: Bearer 0a9fab36846de8eb1aaba3df017346c34996b93f',
             )
         );
@@ -90,7 +90,7 @@ class ApiLeads
             CURLOPT_HTTPHEADER,
             array(
                 'Content-Type: application/json',
-                'Content-Length: '.\strlen($encodedData),
+                'Content-Length: '.\mb_strlen($encodedData),
                 'Authorization: Bearer 0a9fab36846de8eb1aaba3df017346c34996b93f',
             )
         );
