@@ -10,6 +10,13 @@
                     </div>
                     <div class="col-md-6 project-info"  id="contact">
 
+                        <div class="contact-logo">{{ 'project.name'|trans }}</div>
+                        <div class="info">{{ 'project.address'|trans }}<br>
+                            Tel: {{ 'project.phone1'|trans }}<br>
+                            <a href="{{ 'project.url'|trans }}">{{ 'project.url1'|trans }}</a> | <a href="mailto:{{ 'project.email1'|trans }}">{{ 'project.email1'|trans }}</a></div>
+                        <p>{{ 'contact.content.info.txt'|trans }}</p>
+
+
                         {{ form_start(form, {'attr': {'class': 'contact-form'} }) }}
                         <div id="personal">
                             <div class="control-group"><!--name field-->
@@ -51,11 +58,8 @@
                         {{ form_end(form) }}
                     </div>
                     <div class="col-md-6 ">
-                        <div class="contact-logo">{{ 'project.name'|trans }}</div>
-                        <div class="info">{{ 'project.address'|trans }}<br>
-                            Tel: {{ 'project.phone1'|trans }}<br>
-                            <a href="{{ 'project.url'|trans }}">{{ 'project.url1'|trans }}</a> | <a href="mailto:{{ 'project.email1'|trans }}">{{ 'project.email1'|trans }}</a></div>
-                        <p>{{ 'contact.content.info.txt'|trans }}</p>
+                        <span>Anca Marcus</span>
+                        <img class="img-fluid" src="{{ asset('assets/images/trainers/trainer-anca-3.jpg') }}">
                     </div>
                 </div>
             </div>
