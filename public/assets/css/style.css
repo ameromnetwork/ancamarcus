@@ -353,6 +353,28 @@ span.carousel-control-next-icon{
 	text-align: justify;
 	font-size: 15px;
 }
+.white-box-top-0 {
+	padding: 20px 40px;
+	background: #ffffff;
+	border: 1px dotted goldenrod;
+	width: 100%;
+	margin-top: 0px;
+}
+.white-box-top-0 span {
+	font-size: 18px;
+	line-height: 30px;
+	color: goldenrod;
+	text-align: center;
+	letter-spacing: 8px;
+	padding: 20px 0;
+	width: 100%;
+	display: inline-block;
+}
+.white-box-top-0 p {
+	padding: 20px;
+	text-align: justify;
+	font-size: 15px;
+}
 .white-box-link {;
 	width: 100%;
 	text-align: right;
