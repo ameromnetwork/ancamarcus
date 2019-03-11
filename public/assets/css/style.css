@@ -1275,3 +1275,24 @@ Home Page bg
 		width: 80%;
 	}
 }
+
+.post {
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+	text-align: left;
+	margin: 10px 10px 30px;
+}
+.post:hover {
+	box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+}
+	.post h2,
+	.post .tags {
+		padding: 10px 20px;
+	}
+	.section .post h2 a {
+		text-decoration: none;
+		font-size: 24px;
+	}
+	.post img {
+		width: 100%;
+		display: block;
+	}
