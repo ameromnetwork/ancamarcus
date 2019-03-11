@@ -11,7 +11,7 @@
                 <ul class="navbar-nav" id="navbar">
                     <li class="nav-item"> <a class="nav-link {% if app.request.get('_route') == 'home_index' %}active{% endif %}" href="{{ path('home_index') }}">Home</a></li>
                     <li class="nav-item"> <a class="nav-link {% if app.request.get('_route') == 'bio_index' %}active{% endif %} " href="{{ path('bio_index') }}">Bio</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="//school.ancamarcusfit.com">Workout Programs</a></li>
+                    <li class="nav-item"> <a class="nav-link {% if app.request.get('_route') == 'workout_programs_index' %}active{% endif %}" href="{{ path('workout_programs_index') }}">Workout Programs</a></li>
                     <li class="nav-item"><a class="nav-link {% if app.request.get('_route') == 'blog' %}active{% endif %}" href="{{ path('blog') }}">Blog</a></li>
                     <li class="nav-item"><a class="nav-link {% if app.request.get('_route') == 'contact_index' %}active{% endif %}" href="{{ path('contact_index') }}">Contact</a></li>
                 </ul>

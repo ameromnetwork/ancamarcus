@@ -1261,3 +1261,17 @@ Home Page bg
 	}
 }
 
+.digital-flyer {
+	display: block;
+}
+
+	.digital-flyer img {
+		display: block;
+		width: 100%;
+		margin: 0 auto 20px;
+	}
+@media (min-width: 64rem) {
+	.digital-flyer img {
+		width: 80%;
+	}
+}

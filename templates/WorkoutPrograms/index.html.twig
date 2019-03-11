@@ -12,15 +12,25 @@
 
 {% block body %}
     <!-- begin Content -->
-    <section>
-
-        {% for workout in workouts %}
-            {{ dump(workout) }}
-
-        {% endfor %}
-
-
-
-    </section>
+    <div class="spacer-40"></div>
+    <div class="section">
+        <div class="container project-page">
+            <div class="white-box-top-0 center">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <a href="#" class="digital-flyer"><img src="{{ asset('assets/images/f_1.jpeg') }}" alt=""></a>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <a href="#" class="digital-flyer"><img src="{{ asset('assets/images/f_2.jpeg') }}" alt=""></a>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <a href="#" class="digital-flyer"><img src="{{ asset('assets/images/f_3.jpeg') }}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- end Content -->
 {% endblock %}
