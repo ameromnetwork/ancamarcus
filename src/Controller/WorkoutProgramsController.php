@@ -20,12 +20,8 @@ class WorkoutProgramsController extends AbstractController
     /**
      * @Route("/workout-programs", name="workout_programs_index")
      */
-    public function index(WorkoutProgramRepository $workoutProgramRepository)
+    public function index()
     {
-        $workouts = $workoutProgramRepository->findBy([
-            'parent' => null,
-        ]);
-
-        return $this->render('WorkoutPrograms/index.html.twig', \compact('workouts'));
+        return $this->render('WorkoutPrograms/index.html.twig');
     }
 }
