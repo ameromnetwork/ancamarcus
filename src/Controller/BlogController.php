@@ -21,11 +21,10 @@ class BlogController extends Controller
      */
     public function index(BlogPostRepository $blogPostRepository)
     {
-        /*$all = $blogPostRepository->findBy([], [
+        $all = $blogPostRepository->findBy([], [
             'id' => 'DESC',
         ], 3);
-	*/
-	$all = [];
+
         return $this->render('Blog/index.html.twig', [
             'controller_name' => 'BlogController',
             'posts' => $all,
