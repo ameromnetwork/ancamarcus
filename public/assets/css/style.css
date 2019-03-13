@@ -1261,19 +1261,56 @@ Home Page bg
 	}
 }
 
-.digital-flyer {
-	display: block;
+.container-sm {
+	width: 85%;
+	margin: 100px auto 0;
 }
-
-	.digital-flyer img {
-		display: block;
-		width: 100%;
-		margin: 0 auto 20px;
-	}
+.digital-flyer {
+	text-align: center;
+}
+.digital-flyer a {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
 @media (min-width: 64rem) {
-	.digital-flyer img {
-		width: 80%;
+	.digital-flyer a {
+		width: 95%;
 	}
+}
+.digital-flyer a img {
+	display: block;
+	width: 100%;
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.12);
+}
+.digital-flyer .title {
+	background: transparent;
+	text-align: center;
+	color: #4a4a4a;
+	padding: 60px 0 0;
+	margin: 0;
+	line-height: normal;
+}
+.digital-flyer span {
+	padding-top: 0;
+	font-size: 15px;
+	color: #4a4a4a;
+	letter-spacing: 0;
+	display: inline-block;
+	width: auto;
+	padding-bottom: 10px;
+}
+.digital-flyer .old-price {
+	text-decoration: line-through;
+}
+.section .digital-flyer .add-to-cart {
+	display: block;
+	background-color: goldenrod;
+	color: #fff;
+	text-decoration: none;
+	font-size: 17px;
+	border-radius: 3px;
+	width: 50%;
 }
 
 .post {
@@ -1309,3 +1346,4 @@ Home Page bg
 	.post .tags a {
 		text-decoration: none;
 	}
+
