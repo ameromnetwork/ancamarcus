@@ -1150,8 +1150,9 @@ article.blog-article li {
  */
 .bioImg {
 	max-width: 500px;
-	float:left;
-	padding-right:20px;
+	float: left;
+	padding-right: 20px;
+	padding-bottom: 60px;
 }
 
 article.bio p {
