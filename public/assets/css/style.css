@@ -1401,3 +1401,61 @@ Home Page bg
 .follow-bar a:first-child {
 	padding-left: 15px;
 }
+.subscribe {
+	height: auto;
+	background-color: goldenrod;
+}
+.subscribe form {
+	width: 70%;
+	margin: 0 auto;
+	padding: 20px 0 5px;
+}
+@media (min-width: 40rem) {
+	.subscribe form {
+		width: 50%;
+		padding: 60px 0;
+	}
+}
+.subscribe .form-inline .form-control {
+	font-weight: bold;
+	color: #5e5e5e;
+	width: 100%;
+}
+.subscribe .form-group {
+	width: auto;
+}
+.subscribe form input:focus,
+.subscribe form input:active {
+	border: none;
+}
+.subscribe button {
+	margin: 0 auto;
+	width: 50%;
+	display: block;
+	background-color: #5e5e5e;
+	color: #fff;
+}
+@media (min-width: 40rem) {
+	.subscribe button {
+		width: 100%;
+	}
+}
+.subscribe ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: #5e5e5e;
+	font-weight: bold;
+}
+.subscribe ::-moz-placeholder { /* Firefox 19+ */
+	color: #5e5e5e;
+	font-weight: bold;
+}
+.subscribe :-ms-input-placeholder { /* IE 10+ */
+	color: #5e5e5e;
+	font-weight: bold;
+}
+.subscribe :-moz-placeholder { /* Firefox 18- */
+	color: #5e5e5e;
+	font-weight: bold;
+}
+.embed-pagination ul {
+	padding: 10px 0 20px;
+}
