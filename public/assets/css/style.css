@@ -1420,6 +1420,7 @@ Home Page bg
 	font-weight: bold;
 	color: #5e5e5e;
 	width: 100%;
+	border-radius: 0;
 }
 .subscribe .form-group {
 	width: auto;
@@ -1434,6 +1435,7 @@ Home Page bg
 	display: block;
 	background-color: #5e5e5e;
 	color: #fff;
+	border-radius: 0;
 }
 @media (min-width: 40rem) {
 	.subscribe button {
