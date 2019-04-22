@@ -1712,3 +1712,7 @@ Home Page bg
   text-decoration: none;
   margin: 0 -10%;
 }
+
+.tags {
+  display: none;
+}
