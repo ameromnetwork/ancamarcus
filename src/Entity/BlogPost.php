@@ -78,7 +78,8 @@ class BlogPost
     private $image;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="Tag")
+     * @ORM\JoinColumn(name="tag_id", referencedColumnName="id")
      */
     private $tags;
 
