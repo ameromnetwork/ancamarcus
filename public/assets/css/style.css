@@ -1466,3 +1466,9 @@ Home Page bg
 		background: #ffffff;
 	}
 }
+
+@media only screen and (max-width: 768px) {
+	#menuCollapse #navbar .nav-link {
+		margin: 30px 0 -20px 20px!important;
+	}
+}
