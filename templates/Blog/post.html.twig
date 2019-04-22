@@ -3,25 +3,28 @@
 
 
 {% block body %}
-    {% include 'CommonElements/_slider_css.html.twig' %}
-    <div class="section">
-        <div class="container project-page">
-            <div class="white-box center">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="post-content" style="background-color: #FFFFFF; padding: 5px;">
-                            <h5 style="text-align: center;">{{ post.createdAt|date('M d, Y @ H:i A') }} by <span>{{ post.author.name }}</span></h5>
-                            <h4 style="text-align: center;">{{ post.description }}</h4>
-                            <hr style="border-color: goldenrod;" />
-                            <article class="blog-article">
-                                {{ post.body|raw }}
-                            </article>
-                        </div>
-                    </div>
-                    <div class="col-md-2"></div>
-
-                </div>
+  {% include 'CommonElements/_slider_css.html.twig' %}
+  <div class="spacer-40"></div>
+  <div class="section">
+    <div class="container project-page">
+      <div class="white-box-top-0 center">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="post-content" style="background-color: #FFFFFF; padding: 5px;">
+              <img src="https://placeimg.com/640/480/any" alt="{{ post.title|raw }}">
+              <small class="published-at">{{ post.createdAt|date('M d, Y @ H:i A') }}</small><br>
+              <small>by</small>
+              <h5 style="text-align: center;"><span>{{ post.author.name|raw }}</span></h5>
+              <h4 style="text-align: center;">{{ post.title|raw }}</h4>
+              <hr style="border-color: goldenrod;"/>
+              <article class="blog-article">
+                {{ post.body|raw }}
+              </article>
             </div>
+          </div>
+          <div class="col-md-2"></div>
         </div>
+      </div>
     </div>
+  </div>
 {% endblock %}

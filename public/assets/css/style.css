@@ -174,7 +174,7 @@ a.nav-link.flag img {
 .navbar-toggler {
 	border-radius: 0!important;
 	background-color: transparent!important;
-	padding: 0px!important;
+	padding: 0 !important;
 }
 .navbar-light .navbar-toggler-icon {
 	background-image: none!important;
@@ -386,10 +386,10 @@ span.carousel-control-next-icon{
 	position: relative;
 }
 .service-box-left {
-	margin: 20px 0px 40px 0;
+	margin: 20px 0 40px 0;
 }
 .service-box-right {
-	margin: 20px 0px;
+	margin: 20px 0;
 	text-align: right;
 }
 .service-box-left img {
@@ -452,7 +452,7 @@ span.carousel-control-next-icon{
 	text-align: left;
 	color: goldenrod;
 	text-transform: uppercase;
-	line-height: auto;
+	/*line-height: auto;*/
 }
 .team .team-name span {
 	width: 100%;
@@ -724,8 +724,8 @@ section {
 
 .grid-item {
 	float: left;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	background: #888;
 	color: #262524;
 }
@@ -821,7 +821,7 @@ section {
 	width: auto;
 	margin-right: 10px;
 	color: goldenrod;
-	letter-spacing: 0px;
+	letter-spacing: 0;
 	font-size: 14px;
 	padding:0;
 }
@@ -1132,10 +1132,6 @@ section {
 	color:goldenrod;
 }
 
-article.blog-article {
-    padding:20px;
-}
-
 article.blog-article p, ul, li {
     padding:0 !important;
     text-align: left;
@@ -1271,7 +1267,7 @@ Home Page bg
 }
 @media (min-width: 64rem) {
 	.container-sm {
-		width: 85%:
+		width: 85%;
 		margin: 100px auto 0;
 	}
 	.container-sm > div {
@@ -1284,7 +1280,7 @@ Home Page bg
 .digital-flyer a {
 	display: block;
 	width: 130%;
-	margin: 0px -15%;
+	margin: 0 -15%;
 }
 @media (min-width: 40rem) {
 	.digital-flyer a {
@@ -1302,9 +1298,9 @@ Home Page bg
 	-ms-transform: scale(1.35); /* IE 9 */
 	-webkit-transform: scale(1.35); /* Safari 3-8 */
 	transform: scale(1.35);
-	-webkit-box-shadow: 0px 2px 10px 5px rgba(0,0,0,0.45);
-	-moz-box-shadow: 0px 2px 10px 5px rgba(0,0,0,0.45);
-	box-shadow: 0px 2px 10px 5px rgba(0,0,0,0.45);
+	-webkit-box-shadow: 0 2px 10px 5px rgba(0,0,0,0.45);
+	-moz-box-shadow: 0 2px 10px 5px rgba(0,0,0,0.45);
+	box-shadow: 0 2px 10px 5px rgba(0,0,0,0.45);
 	position: relative;
 	z-index: 2000;
 }
@@ -1470,5 +1466,43 @@ Home Page bg
 @media only screen and (max-width: 768px) {
 	#menuCollapse #navbar .nav-link {
 		margin: 30px 0 -20px 20px!important;
+	}
+}
+
+.post p {
+	padding: 20px;
+}
+
+.post-content img {
+	width: 130%;
+	display: block;
+	margin: 0 -15%;
+}
+@media (min-width: 40rem) {
+	.post-content img {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+.post-content h5 span {
+	padding: 5px 0 20px;
+}
+.post-content h4,
+.post-content .blog-article {
+	margin: 0 -10%;
+}
+@media (min-width: 40rem) {
+	.post-content h4,
+	.post-content .blog-article {
+		margin: 0;
+	}
+}
+.post-content .blog-article {
+	text-align: justify;
+}
+@media (min-width: 40rem) {
+	.post-content .blog-article {
+		width: 80%;
+		margin: 50px auto;
 	}
 }
