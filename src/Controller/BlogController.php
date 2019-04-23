@@ -4,13 +4,13 @@ namespace App\Controller;
 
 use App\Entity\BlogPost;
 use App\Repository\BlogPostRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Class BlogController.
  */
-class BlogController extends Controller
+class BlogController extends AbstractController
 {
     /**
      * @Route("/blog", name="blog")
@@ -21,12 +21,9 @@ class BlogController extends Controller
      */
     public function index(BlogPostRepository $blogPostRepository)
     {
-        $all = $blogPostRepository->findBy([], [
-            'id' => 'DESC',
-        ], 3);
+        $all = $blogPostRepository->findBy([], ['id' => 'DESC']);
 
         return $this->render('Blog/index.html.twig', [
-            'controller_name' => 'BlogController',
             'posts' => $all,
         ]);
     }

@@ -24,7 +24,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4">
               <article class="post">
                 <h2><a href="{{ path('blog_post', { slug: post.slug }) }}">{{ post.title }}</a></h2>
-                <a href="{{ path('blog_post', { slug: post.slug }) }}"><img src="https://placeimg.com/640/480/any" alt="{{ post.title }}"></a>
+                <a href="{{ path('blog_post', { slug: post.slug }) }}"><img src="{{ asset(post.image) }}" alt="{{ post.title }}"></a>
                 <p>{{ post.description }}</p>
                 <div class="tags">
                   <i class="fa fa-bars"></i> Category: <a href="#">Lorem</a>, <a href="#">Ipsum</a>, <a
