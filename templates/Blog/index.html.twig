@@ -8,18 +8,6 @@
     <div class="container project-page">
       <div class="white-box-top-0 center">
         <div class="row">
-          <!-- {#<article class="">#}
-                    <div class="col-md-12">
-                        <h3>Recent posts...</h3>
-                        {% for post in posts if posts is not empty %}
-                            <hr style="border-color: goldenrod;" />
-                            <h4><a href="{{ path('blog_post', { slug: post.slug }) }}" style="text-decoration: none;">{{ post.title }}</a></h4>
-                            <small>by {{ post.author.name }} on {{ post.createdAt|date('M d, Y H:i A') }}</small>
-                            <p>{{ post.description }}</p>
-                        {% endfor %}
-                        <hr />
-                    </div>
-                {#</article>#} -->
           {% for post in posts if posts is not empty %}
             <div class="col-sm-12 col-md-6 col-lg-4">
               <article class="post">
