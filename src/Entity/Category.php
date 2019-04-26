@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -20,7 +21,58 @@ class Category
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private $title;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="BlogPost", mappedBy="categories")
+     * @var Collection
+     */
+    private $blogPosts;
+
+    public function __construct()
+    {
+        $this->blogPosts = new ArrayCollection();
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getBlogPosts(): Collection
+    {
+        return $this->blogPosts;
+    }
+
+    /**
+     * @param BlogPost $blogPost
+     */
+    public function addBlogPost(BlogPost $blogPost): void
+    {
+        // First we check if we already have this blog post in our collection
+        if ($this->blogPosts->contains($blogPost)) {
+            // Do nothing if its already part of our collection
+            return;
+        }
+        // Add blog post to our array collection
+        $this->blogPosts->add($blogPost);
+        // We also add this category to the blog post. This way both entities are 'linked' together.
+        // In a manyToMany relationship both entities need to know that they are linked together.
+        $blogPost->addCategory($this);
+    }
+
+    /**
+     * @param BlogPost $blogPost
+     */
+    public function removeBlogPost(BlogPost $blogPost): void
+    {
+        // If the blog post does not exist in the collection, then we don't need to do anything
+        if (!$this->blogPosts->contains($blogPost)) {
+            return;
+        }
+        // Remove blog post from the collection
+        $this->blogPosts->removeElement($blogPost);
+        // Also remove this from the category collection of the blog post
+        $blogPost->removeCategory($this);
+    }
 
     /**
      * @ORM\Column(type="datetime")
