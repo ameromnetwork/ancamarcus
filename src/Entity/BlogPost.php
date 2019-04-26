@@ -94,7 +94,7 @@ class BlogPost
     public function __construct()
     {
         $this->categories = new ArrayCollection();
-        $this->tagas = new ArrayCollection();
+        $this->tags = new ArrayCollection();
     }
 
     /**
@@ -401,5 +401,10 @@ class BlogPost
         $this->categories = $category;
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return (string) $this->author;
     }
 }
