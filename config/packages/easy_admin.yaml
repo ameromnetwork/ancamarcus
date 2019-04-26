@@ -1,5 +1,44 @@
 # config/packages/easy_admin.yaml
 easy_admin:
+    site_name: 'ancamarcusfit.com'
     entities:
         BlogPost:
             class: App\Entity\BlogPost
+            list:
+                fields:
+                    - id
+                    - title
+                    - description
+                    - categories
+                    - tags
+                    - { property: 'createdAt', format: 'd/m/Y H:i:s' }
+                    - { property: 'updatedAt', format: 'd/m/Y H:i:s' }
+                actions: ['show', '-edit', 'new']
+                batch_actions: ['delete']
+            form:
+                fields:
+                    - title
+                    - description
+                    - body
+                    - { property: 'image', type: 'file' }
+                    - author
+                    - tags
+                    - categories
+            show:
+                fields:
+                    - title
+                    - description
+                    - body
+                    - { property: 'image', type: 'image' }
+                    - author
+                    - tags
+                    - categories
+        Category:
+            class: App\Entity\Category
+        Tag:
+            class: App\Entity\Tag
+
+    user:
+        display_name: true
+        name_property_path: 'username'
+        display_avatar: true
