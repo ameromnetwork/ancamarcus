@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -78,16 +80,102 @@ class BlogPost
     private $image;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Tag")
-     * @ORM\JoinColumn(name="tag_id", referencedColumnName="id")
+     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="blogPosts")
+     * @var Collection
      */
     private $tags;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Category")
-     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
+     * @ORM\ManyToMany(targetEntity="Category", inversedBy="blogPosts")
+     * @var Collection
      */
-    private $category;
+    private $categories;
+
+    public function __construct()
+    {
+        $this->categories = new ArrayCollection();
+        $this->tagas = new ArrayCollection();
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getCategories(): Collection
+    {
+        return $this->categories;
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getTags(): Collection
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @param Category $category
+     */
+    public function addCategory(Category $category): void
+    {
+        // First we check if we already have this category in our collection
+        if ($this->categories->contains($category)){
+            // Do nothing if its already part of our collection
+            return;
+        }
+        // Add category to our array collection
+        $this->categories->add($category);
+        // We also add this blog post to the category. This way both entities are 'linked' together.
+        // In a manyToMany relationship both entities need to know that they are linked together.
+        $category->addBlogPost($this);
+    }
+
+    /**
+     * @param Tag $tag
+     */
+    public function addTags(Tag $tag): void
+    {
+        // First we check if we already have this tag in our collection
+        if ($this->tags->contains($tag)){
+            // Do nothing if its already part of our collection
+            return;
+        }
+        // Add tag to our array collection
+        $this->tags->add($tag);
+        // We also add this blog post to the tag. This way both entities are 'linked' together.
+        // In a manyToMany relationship both entities need to know that they are linked together.
+        $tag->addBlogPost($this);
+    }
+
+    /**
+     * @param Category $category
+     */
+    public function removeCategory(Category $category): void
+    {
+        // If the category does not exist in the collection, then we don't need to do anything
+        if (!$this->categories->contains($category)) {
+            return;
+        }
+        // Remove category from the collection
+        $this->categories->removeElement($category);
+        // Also remove this from the blog post collection of the category
+        $category->removeBlogPost($this);
+    }
+
+    /**
+     * @param Tag $tag
+     */
+    public function removeTag(Tag $tag): void
+    {
+        // If the tag does not exist in the collection, then we don't need to do anything
+        if (!$this->tags->contains($tag)) {
+            return;
+        }
+        // Remove tag from the collection
+        $this->tags->removeElement($tag);
+        // Also remove this from the blog post collection of the tag
+        $tag->removeBlogPost($this);
+    }
 
     /**
      * Get id.
@@ -301,11 +389,6 @@ class BlogPost
         return $this;
     }
 
-    public function getTags(): ?string
-    {
-        return $this->tags;
-    }
-
     public function setTags(string $tags): self
     {
         $this->tags = $tags;
@@ -313,14 +396,9 @@ class BlogPost
         return $this;
     }
 
-    public function getCategory(): ?string
+    public function setCategories(string $category): self
     {
-        return $this->category;
-    }
-
-    public function setCategory(string $category): self
-    {
-        $this->category = $category;
+        $this->categories = $category;
 
         return $this;
     }
