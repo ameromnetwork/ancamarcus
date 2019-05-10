@@ -20,16 +20,17 @@ easy_admin:
                     - title
                     - description
                     - body
-                    - { property: 'image', type: 'file' }
+                    - { property: 'imageFile', type: 'file' }
                     - author
                     - tags
                     - categories
             show:
                 fields:
                     - title
+                    - slug
                     - description
                     - body
-                    - { property: 'image', type: 'image' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.blog_images%' }
                     - author
                     - tags
                     - categories
