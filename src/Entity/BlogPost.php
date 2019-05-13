@@ -433,6 +433,6 @@ class BlogPost
 
     public function __toString()
     {
-        return (string) $this->author;
+        return (string) $this->title;
     }
 }
