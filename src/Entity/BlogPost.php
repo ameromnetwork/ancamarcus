@@ -90,13 +90,13 @@ class BlogPost
     private $imageFile;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="blogPosts")
+     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="blogPosts", fetch="EAGER")
      * @var Collection
      */
     private $tags;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Category", inversedBy="blogPosts")
+     * @ORM\ManyToMany(targetEntity="Category", inversedBy="blogPosts", fetch="EAGER")
      * @var Collection
      */
     private $categories;

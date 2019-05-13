@@ -38,7 +38,7 @@ easy_admin:
             form:
                 fields:
                     - title
-                    - blogPosts
+                    - { property: 'blogPosts', type_options: { by_reference: false } }
                 actions: ['edit', 'new']
                 batch_actions: ['delete']
         Tag:
@@ -46,7 +46,7 @@ easy_admin:
             form:
                 fields:
                     - title
-                    - blogPosts
+                    - { property: 'blogPosts', type_options: { by_reference: false } }
                 actions: ['edit', 'new']
                 batch_actions: ['delete']
     user:
