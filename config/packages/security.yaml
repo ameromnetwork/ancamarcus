@@ -1,25 +1,26 @@
 security:
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+
     providers:
-        hwi:
-            id: hwi_oauth.user.provider
+#        hwi:
+#            id: hwi_oauth.user.provider
+        # used to reload user from session & other features (e.g. switch_user)
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: username
 
     firewalls:
-        secured_area:
-            anonymous: ~
-            oauth:
-                resource_owners:
-                    auth0: "/auth0/callback"
-                login_path:        /login
-                use_forward:       false
-                failure_path:      /login
-
-                oauth_user_provider:
-                    service: hwi_oauth.user.provider
-            logout:
-                path:   /auth0/logout
-                target: /
         main:
-            anonymous: ~
+            anonymous: true
+            provider: app_user_provider
+            guard:
+                authenticators:
+                    - App\Security\UserAuthenticator
+            logout:
+                path: app_logout
     access_control:
-        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/secured, roles: ROLE_OAUTH_USER }
+        - { path: ^/Login, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin, role: ROLE_ADMIN }

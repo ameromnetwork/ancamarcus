@@ -2,191 +2,112 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * @ORM\Table(name="`user`")
  */
 class User implements UserInterface
 {
     /**
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string", unique=true)
+     * @ORM\Column(type="string", length=180, unique=true)
      */
     private $username;
 
     /**
-     * @ORM\Column(type="string", unique=true, nullable=false)
+     * @ORM\Column(type="json")
      */
-    private $email;
+    private $roles = [];
 
     /**
-     * @ORM\Column(type="string", unique=false)
+     * @var string The hashed password
+     * @ORM\Column(type="string")
      */
     private $password;
 
-    /**
-     * @ORM\Column(type="string", nullable=true)
-     */
-    private $salt;
-
-    /**
-     * @ORM\Column(type="string", unique=false)
-     */
-    private $apiKey;
-
-    /**
-     * @ORM\Column(type="string", nullable=true)
-     */
-    private $facebookId;
-
-    /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
-     *
-     * @ORM\OneToMany(targetEntity="App\Entity\WorkoutProgram", mappedBy="user", cascade={"persist", "remove"})
-     */
-    protected $workoutPrograms;
-
-    /**
-     * User constructor.
-     */
-    public function __construct()
+    public function getId(): ?int
     {
-        $this->apiKey = \sha1(\uniqid().\time());
-        $this->workoutPrograms = new ArrayCollection();
+        return $this->id;
     }
 
-    /**
-     * @return string
-     */
-    public function getUsername(): ?string
-    {
-        return $this->username;
-    }
+//    public function getUsername(): ?string
+//    {
+//        return $this->username;
+//    }
 
-    /**
-     * @return mixed
-     */
-    public function getEmail(): ?string
+    public function setUsername(string $username): self
     {
-        return $this->email;
-    }
-
-    /**
-     * @param mixed $email
-     *
-     * @return User
-     */
-    public function setEmail($email): self
-    {
-        $this->email = $email;
+        $this->username = $username;
 
         return $this;
     }
 
     /**
-     * @return array
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
      */
-    public function getRoles()
+    public function getUsername(): string
     {
-        return array('ROLE_USER');
+        return (string) $this->username;
     }
 
     /**
-     * @return string
+     * @see UserInterface
      */
-    public function getPassword()
+    public function getRoles(): array
     {
-        return $this->password;
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+
+        return $this;
     }
 
     /**
-     * @return null|string
+     * @see UserInterface
+     */
+    public function getPassword(): string
+    {
+        return (string) $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * @see UserInterface
      */
     public function getSalt()
     {
-        return $this->salt;
+        // not needed when using the "bcrypt" algorithm in security.yaml
     }
 
+    /**
+     * @see UserInterface
+     */
     public function eraseCredentials()
     {
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getApiKey(): ?string
-    {
-        return $this->apiKey;
-    }
-
-    /**
-     * @param mixed $apiKey
-     *
-     * @return User
-     */
-    public function setApiKey($apiKey): self
-    {
-        $this->apiKey = $apiKey;
-
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFacebookId(): ? string
-    {
-        return $this->facebookId;
-    }
-
-    /**
-     * @param mixed $facebookId
-     *
-     * @return User
-     */
-    public function setFacebookId($facebookId): self
-    {
-        $this->facebookId = $facebookId;
-
-        return $this;
-    }
-
-    /**
-     * @return \Doctrine\Common\Collections\ArrayCollection
-     */
-    public function getWorkoutPrograms(): ?\Doctrine\Common\Collections\ArrayCollection
-    {
-        return $this->workoutPrograms;
-    }
-
-    public function addWorkoutProgram(WorkoutProgram $workoutProgram): self
-    {
-        $workoutProgram->setUser($this);
-
-        $this->workoutPrograms->add($workoutProgram);
-
-        return $this;
-    }
-
-    /**
-     * @param \Doctrine\Common\Collections\ArrayCollection $workoutPrograms
-     *
-     * @return User
-     */
-    public function setWorkoutPrograms(\Doctrine\Common\Collections\ArrayCollection $workoutPrograms): self
-    {
-        $this->workoutPrograms = $workoutPrograms;
-
-        return $this;
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
     }
 }

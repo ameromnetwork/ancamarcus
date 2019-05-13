@@ -1512,17 +1512,20 @@ Home Page bg
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
   text-align: left;
   margin: 10px -20px;
+  padding-bottom: 20px;
 }
 
 @media (min-width: 40rem) {
   .post {
     margin: 10px 0 20px;
+    padding-bottom: 20px;
   }
 }
 
 @media (min-width: 64rem) {
   .post {
     margin: 10px 10px 30px;
+    padding-bottom: 20px;
   }
 }
 
@@ -1530,17 +1533,23 @@ Home Page bg
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
 }
 
-.post h2,
-.post .tags {
+.post h2 {
   padding: 10px 20px;
 }
 
-.post .tags {
+.post-content .tags,
+.post-content .categories,
+.post .tags,
+.post .categories {
   line-height: 1.5;
+  padding: 0 20px;
 }
 
 @media (min-width: 40rem) {
-  .post .tags {
+  .post-content .tags,
+  .post-content .categories,
+  .post .tags,
+  .post .categories {
     line-height: 2;
   }
 }
@@ -1555,7 +1564,10 @@ Home Page bg
   display: block;
 }
 
-.post .tags a {
+.post-content .tags a,
+.post-content .categories a,
+.post .tags a,
+.post .categories a {
   text-decoration: none;
 }
 
@@ -1706,13 +1718,4 @@ Home Page bg
     width: 80%;
     margin: 50px auto;
   }
-}
-
-.post-content .tags a {
-  text-decoration: none;
-  margin: 0 -10%;
-}
-
-.tags {
-  display: none;
 }

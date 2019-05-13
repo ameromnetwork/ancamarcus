@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Table(name="tag")
  * @ORM\Entity(repositoryClass="App\Repository\TagRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class Tag
 {
@@ -25,7 +26,7 @@ class Tag
     private $title;
 
     /**
-     * @ORM\ManyToMany(targetEntity="BlogPost", mappedBy="categories")
+     * @ORM\ManyToMany(targetEntity="BlogPost", mappedBy="tags")
      * @var Collection
      */
     private $blogPosts;
@@ -55,9 +56,9 @@ class Tag
         }
         // Add blog post to our array collection
         $this->blogPosts->add($blogPost);
-        // We also add this category to the blog post. This way both entities are 'linked' together.
+        // We also add this tag to the blog post. This way both entities are 'linked' together.
         // In a manyToMany relationship both entities need to know that they are linked together.
-        $blogPost->addCategory($this);
+        $blogPost->addTags($this);
     }
 
     /**
@@ -71,8 +72,8 @@ class Tag
         }
         // Remove blog post from the collection
         $this->blogPosts->removeElement($blogPost);
-        // Also remove this from the category collection of the blog post
-        $blogPost->removeCategory($this);
+        // Also remove this from the tag collection of the blog post
+        $blogPost->removeTag($this);
     }
 
     /**
@@ -90,14 +91,14 @@ class Tag
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getTitle(): ?string
     {
-        return $this->name;
+        return $this->title;
     }
 
-    public function setName(string $name): self
+    public function setTitle(string $title): self
     {
-        $this->name = $name;
+        $this->title = $title;
 
         return $this;
     }
@@ -146,5 +147,10 @@ class Tag
     public function preUpdate()
     {
         $this->setUpdatedAt(new \DateTime());
+    }
+
+    public function __toString()
+    {
+        return (string) $this->title;
     }
 }
