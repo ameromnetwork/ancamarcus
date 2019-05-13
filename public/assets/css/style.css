@@ -1537,6 +1537,8 @@ Home Page bg
   padding: 10px 20px;
 }
 
+.post-content .tags,
+.post-content .categories,
 .post .tags,
 .post .categories {
   line-height: 1.5;
@@ -1544,6 +1546,8 @@ Home Page bg
 }
 
 @media (min-width: 40rem) {
+  .post-content .tags,
+  .post-content .categories,
   .post .tags,
   .post .categories {
     line-height: 2;
@@ -1560,6 +1564,8 @@ Home Page bg
   display: block;
 }
 
+.post-content .tags a,
+.post-content .categories a,
 .post .tags a,
 .post .categories a {
   text-decoration: none;
@@ -1712,9 +1718,4 @@ Home Page bg
     width: 80%;
     margin: 50px auto;
   }
-}
-
-.post-content .tags a {
-  text-decoration: none;
-  margin: 0 -10%;
 }
