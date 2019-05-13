@@ -1,69 +1,73 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <div class="spacer-40"></div>
-    <div class="section">
-        <div class="container project-page">
-            <div class="white-box-top-0 center">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="title">{{ 'contact.title'|trans }}</div>
-                        {#<div style="height: 1000px;"></div>#}
-                    </div>
-                    <div class="col-md-6 project-info"  id="contact">
+  <div class="spacer-40"></div>
+  <div class="section">
+    <div class="container project-page">
+      <div class="white-box-top-0 center">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title">{{ 'contact.title'|trans }}</div>
+            {#<div style="height: 1000px;"></div>#}
+          </div>
+          <div class="col-md-6 project-info" id="contact">
 
-                        <div class="contact-logo">{{ 'project.name'|trans }}</div>
-                        <div class="info">{{ 'project.address'|trans }}<br>
-                            Tel: {{ 'project.phone1'|trans }}<br>
-                            <a href="{{ 'project.url'|trans }}">{{ 'project.url1'|trans }}</a> | <a href="mailto:{{ 'project.email1'|trans }}">{{ 'project.email2'|trans }}</a></div>
-                        <p>{{ 'contact.content.info.txt'|trans }}</p>
+            <div class="contact-logo">{{ 'project.name'|trans }}</div>
+            <div class="info">{{ 'project.address'|trans }}<br>
+              Tel: {{ 'project.phone1'|trans }}<br>
+              <a href="{{ 'project.url'|trans }}">{{ 'project.url1'|trans }}</a> | <a
+                  href="mailto:{{ 'project.email1'|trans }}">{{ 'project.email2'|trans }}</a></div>
+            <p>{{ 'contact.content.info.txt'|trans }}</p>
 
 
-                        {{ form_start(form, {'attr': {'class': 'contact-form'} }) }}
-                        <div id="personal">
-                            <div class="control-group"><!--name field-->
-                                <div class="controls">
-                                    {{ form_widget(form.firstName) }}
-                                </div>
-                            </div>
-                            <div class="control-group"><!--name field-->
-                                <div class="controls">
-                                    {{ form_widget(form.lastName) }}
-                                </div>
-                            </div>
-                            <div class="control-group"><!--email field-->
-                                <div class="controls">
-                                    {{ form_widget(form.email) }}
-                                </div>
-                            </div>
-                            <div class="control-group"><!--email field-->
-                                <div class="controls">
-                                    {{ form_widget(form.subject) }}
-                                </div>
-                            </div>
-                            <div class="control-group"><!--message field-->
-                                <div class="controls">
-                                    {{ form_widget(form.message) }}
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="controls right">
-                                    <button type="submit" class="btn-main">{{ 'contact.submitBtt'|trans }} <i class="fa fa-send" aria-hidden="true"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="notifications">
-                            <div id="contactFormSent" class="formSent alert alert-success"> {{ include('CommonElements/_flash-messages.html.twig') }}</div>
-                            {#<div id="contactFormSent" class="formSent alert alert-success"> <strong>Your Message Has Been Sent!</strong> Thank you for contacting us.</div>#}
-                            {#<div id="contactFormError" class="formError alert alert-error"> <strong>Oops, An error has ocurred!</strong> See the marked fields above to fix the errors.</div>#}
-                        </div>
-                        {{ form_end(form) }}
-                    </div>
-                    <div class="col-md-6 ">
-                        <span>Anca Marcus</span>
-                        <img class="img-fluid" src="{{ asset('assets/images/trainers/trainer-anca-3.jpg') }}">
-                    </div>
+            {{ form_start(form, {'attr': {'class': 'contact-form'} }) }}
+            <div id="personal">
+              <div class="control-group"><!--name field-->
+                <div class="controls">
+                  {{ form_widget(form.firstName) }}
                 </div>
+              </div>
+              <div class="control-group"><!--name field-->
+                <div class="controls">
+                  {{ form_widget(form.lastName) }}
+                </div>
+              </div>
+              <div class="control-group"><!--email field-->
+                <div class="controls">
+                  {{ form_widget(form.email) }}
+                </div>
+              </div>
+              <div class="control-group"><!--email field-->
+                <div class="controls">
+                  {{ form_widget(form.subject) }}
+                </div>
+              </div>
+              <div class="control-group"><!--message field-->
+                <div class="controls">
+                  {{ form_widget(form.message) }}
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="controls right">
+                  <button type="submit" class="btn-main">{{ 'contact.submitBtt'|trans }} <i class="fa fa-send"
+                                                                                            aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
             </div>
+            <div class="notifications">
+              <div id="contactFormSent"
+                   class="formSent alert alert-success"> {{ include('CommonElements/_flash-messages.html.twig') }}</div>
+              {#<div id="contactFormSent" class="formSent alert alert-success"> <strong>Your Message Has Been Sent!</strong> Thank you for contacting us.</div>#}
+              {#<div id="contactFormError" class="formError alert alert-error"> <strong>Oops, An error has ocurred!</strong> See the marked fields above to fix the errors.</div>#}
+            </div>
+            {{ form_end(form) }}
+          </div>
+          <div class="col-md-6 ">
+            <span>Anca Marcus</span>
+            <img class="img-fluid" src="{{ asset('assets/images/trainers/trainer-anca-3.jpg') }}">
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 {% endblock %}
