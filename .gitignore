@@ -22,3 +22,5 @@ public/.htaccess
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-pack ###
+
+/public/assets/images/blog
