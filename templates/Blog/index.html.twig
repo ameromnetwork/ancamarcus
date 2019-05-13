@@ -12,12 +12,20 @@
             <div class="col-sm-12 col-md-6 col-lg-4">
               <article class="post">
                 <h2><a href="{{ path('blog_post', { slug: post.slug }) }}">{{ post.title }}</a></h2>
-                <a href="{{ path('blog_post', { slug: post.slug }) }}"><img src="{{ asset('assets/images/blog/' ~ post.image) }}" alt="{{ post.title }}"></a>
+                <a href="{{ path('blog_post', { slug: post.slug }) }}"><img
+                    src="{{ asset('assets/images/blog/' ~ post.image) }}" alt="{{ post.title }}"></a>
                 <p>{{ post.description }}</p>
+                <div class="categories">
+                  <i class="fa fa-bars"></i> Category:
+                  {% for category in post.categories %}
+                    <a href="#">{{ category.title }}</a>
+                  {% endfor %}
+                </div>
                 <div class="tags">
-                  <i class="fa fa-bars"></i> Category: <a href="#">Lorem</a>, <a href="#">Ipsum</a>, <a
-                      href="#">Dummy</a>, <a href="#">Text</a>, <a href="#">Text</a><br> <i class="fa fa-tags"></i>
-                  Tags: <a href="#">text</a>, <a href="#">printing</a>, <a href="#">dummy</a>
+                  <i class="fa fa-tags"></i> Tags:
+                  {% for tag in post.tags %}
+                    <a href="#">{{ tag.title }}</a>
+                  {% endfor %}
                 </div>
               </article>
             </div>

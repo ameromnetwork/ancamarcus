@@ -9,9 +9,6 @@
         <div class="row">
           <div class="col-md-12">
             <div class="post-content" style="background-color: #FFFFFF; padding: 5px;">
-              {% for tag in post.tags %}
-                {{ dump(tag.title) }}
-              {% endfor %}
               <img src="{{ asset('assets/images/blog/' ~ post.image) }}" alt="{{ post.title|raw }}">
               <small class="published-at">{{ post.createdAt|date('M d, Y @ H:i A') }}</small><br>
               {% if post.author %}
