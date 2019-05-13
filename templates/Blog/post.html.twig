@@ -1,7 +1,5 @@
 {% extends 'base.html.twig' %}
 
-
-
 {% block body %}
   {% include 'CommonElements/_slider_css.html.twig' %}
   <div class="spacer-40"></div>
@@ -13,8 +11,10 @@
             <div class="post-content" style="background-color: #FFFFFF; padding: 5px;">
               <img src="{{ asset('assets/images/blog/' ~ post.image) }}" alt="{{ post.title|raw }}">
               <small class="published-at">{{ post.createdAt|date('M d, Y @ H:i A') }}</small><br>
-              <small>by</small>
-              <h5 style="text-align: center;"><span>{{ post.author.name|raw }}</span></h5>
+              {% if post.author %}
+                <small>by</small>
+                <h5 style="text-align: center;"><span>{{ post.author|raw }}</span></h5>
+              {% endif %}
               <h4 style="text-align: center;">{{ post.title|raw }}</h4>
               <hr style="border-color: goldenrod;"/>
               <article class="blog-article">
