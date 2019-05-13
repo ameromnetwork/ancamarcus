@@ -8,19 +8,18 @@ easy_admin:
                 fields:
                     - id
                     - title
-                    - description
                     - categories
                     - tags
                     - { property: 'createdAt', format: 'd/m/Y H:i:s' }
                     - { property: 'updatedAt', format: 'd/m/Y H:i:s' }
-                actions: ['show', '-edit', 'new']
+                actions: ['edit', 'new']
                 batch_actions: ['delete']
             form:
                 fields:
                     - title
                     - description
                     - body
-                    - { property: 'imageFile', type: 'file' }
+                    - { property: 'imageFile', type: 'vich_file' }
                     - author
                     - tags
                     - categories
@@ -36,9 +35,20 @@ easy_admin:
                     - categories
         Category:
             class: App\Entity\Category
+            form:
+                fields:
+                    - title
+                    - blogPosts
+                actions: ['edit', 'new']
+                batch_actions: ['delete']
         Tag:
             class: App\Entity\Tag
-
+            form:
+                fields:
+                    - title
+                    - blogPosts
+                actions: ['edit', 'new']
+                batch_actions: ['delete']
     user:
         display_name: true
         name_property_path: 'username'
