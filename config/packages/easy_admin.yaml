@@ -35,19 +35,35 @@ easy_admin:
                     - categories
         Category:
             class: App\Entity\Category
+            list:
+                fields:
+                    - id
+                    - title
+                    - blogPosts
+                    - { property: 'created_at', format: 'd/m/Y H:i:s' }
+                    - { property: 'updated_at', format: 'd/m/Y H:i:s' }
+                actions: ['edit', 'new']
+                batch_actions: ['delete']
             form:
                 fields:
                     - title
                     - { property: 'blogPosts', type_options: { by_reference: false } }
-                actions: ['edit', 'new']
                 batch_actions: ['delete']
         Tag:
             class: App\Entity\Tag
+            list:
+                fields:
+                    - id
+                    - title
+                    - blogPosts
+                    - { property: 'created_at', format: 'd/m/Y H:i:s' }
+                    - { property: 'updated_at', format: 'd/m/Y H:i:s' }
+                actions: ['edit', 'new']
+                batch_actions: ['delete']
             form:
                 fields:
                     - title
                     - { property: 'blogPosts', type_options: { by_reference: false } }
-                actions: ['edit', 'new']
                 batch_actions: ['delete']
     user:
         display_name: true
