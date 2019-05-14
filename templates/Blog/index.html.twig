@@ -15,18 +15,8 @@
                 <a href="{{ path('blog_post', { slug: post.slug }) }}"><img
                     src="{{ asset('assets/images/blog/' ~ post.image) }}" alt="{{ post.title }}"></a>
                 <p>{{ post.description }}</p>
-                <div class="categories">
-                  <i class="fa fa-bars"></i> Category:
-                  {% for category in post.categories %}
-                    <a href="#">{{ category.title }}</a>
-                  {% endfor %}
-                </div>
-                <div class="tags">
-                  <i class="fa fa-tags"></i> Tags:
-                  {% for tag in post.tags %}
-                    <a href="#">{{ tag.title }}</a>
-                  {% endfor %}
-                </div>
+                {% include('Blog/_post_categories.html.twig') %}
+                {% include('Blog/_post_tags.html.twig') %}
               </article>
             </div>
           {% endfor %}
