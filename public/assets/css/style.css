@@ -1719,3 +1719,7 @@ Home Page bg
     margin: 50px auto;
   }
 }
+
+.easyadmin-vich-image-actions .custom-file {
+  height: 0;
+}

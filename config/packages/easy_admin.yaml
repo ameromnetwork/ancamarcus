@@ -19,7 +19,7 @@ easy_admin:
                     - title
                     - description
                     - body
-                    - { property: 'imageFile', type: 'vich_file' }
+                    - { property: 'imageFile', type: 'vich_image' }
                     - author
                     - tags
                     - categories
@@ -69,3 +69,7 @@ easy_admin:
         display_name: true
         name_property_path: 'username'
         display_avatar: true
+    design:
+        assets:
+            css:
+                - 'bundles/easyadmin/custom.css'
