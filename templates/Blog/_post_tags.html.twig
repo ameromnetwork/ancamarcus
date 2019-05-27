@@ -1,0 +1,8 @@
+{% if not post.tags.empty %}
+  <div class="tags">
+    <i class="fa fa-tags"></i> Tags:
+    {% for tag in post.tags %}
+      <a href="{{ path('blog', { 'tag': tag.slug }) }}">{{ tag.title }}</a>
+    {% endfor %}
+  </div>
+{% endif %}

@@ -3,6 +3,8 @@
 namespace App\Repository;
 
 use App\Entity\BlogPost;
+use App\Entity\Category;
+use App\Entity\Tag;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
@@ -18,33 +20,27 @@ class BlogPostRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, BlogPost::class);
     }
-
-//    /**
-//     * @return BlogPost[] Returns an array of BlogPost objects
-//     */
-    /*
-    public function findByExampleField($value)
+    
+    public function findLatest(Tag $tag = null, Category $category = null)
     {
-        return $this->createQueryBuilder('b')
-            ->andWhere('b.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('b.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
+        $qb = $this->createQueryBuilder('bp')
+            ->join('bp.tags', 't')
+            ->join('bp.categories', 'c')
+            ->where('bp.createdAt <= :now')
+            ->orderBy('bp.createdAt', 'DESC')
+            ->setParameter('now', new \DateTime())
         ;
-    }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?BlogPost
-    {
-        return $this->createQueryBuilder('b')
-            ->andWhere('b.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+//        dd($tag);
+        if (null !== $tag) {
+            $qb->andWhere(':tag MEMBER OF bp.tags')
+                ->setParameter('tag', $tag);
+        }
+
+        if (null !== $category) {
+            $qb->andWhere(':category MEMBER OF bp.categories')
+                ->setParameter('category', $category);
+        }
+        return $qb->getQuery()->getResult();
     }
-    */
 }

@@ -1,0 +1,8 @@
+{% if not post.categories.empty %}
+  <div class="categories">
+    <i class="fa fa-bars"></i> Category:
+    {% for category in post.categories %}
+      <a href="{{ path('blog', {'category': category.slug == app.request.query.get('category') ? null : category.slug}) }}">{{ category.title }}</a>
+    {% endfor %}
+  </div>
+{% endif %}
