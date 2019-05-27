@@ -72,4 +72,4 @@ easy_admin:
     design:
         assets:
             css:
-                - 'assets/css/custom.css'
+                - 'assets/css/easyadmin_custom.css'
